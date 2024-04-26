@@ -1,0 +1,162 @@
+---
+title: Virginia Genomics Center of Excellence
+date: today
+---
+
+```{r}
+# correlate deaths and cases by state
+library(tidyverse)
+library(covid19nytimes)
+library(lubridate)
+library(broom)
+library(knitr)
+library(timetk)
+
+# source https://github.com/nytimes/covid-19-data.git
+us_states_long <- covid19nytimes::refresh_covid19nytimes_states()
+
+# The following filter is to restrict the data to that originally posted at
+# https://outsiderdata.netlify.app/post/covid-cases-vs-deaths/
+# Should you wish to update the models with the latest data, remove the
+# following statement.
+us_states_long <- us_states_long %>% filter(date < ymd("2020-12-06"))
+
+# if link is broken
+# load("../data/us_states_long.rdata")
+
+# use data from November 15 to stay consistent with text narrative
+cutoff_start <- as.Date("2020-03-15") # not widespread enough until then
+cutoff_end <- max(us_states_long$date) - 7 # discard last week since there are reporting lags
+
+us_states_long <- us_states_long %>% filter(date >= cutoff_start)
+us_states_long <- us_states_long %>% filter(date <= cutoff_end)
+# Remove tiny territories
+territories <- c("Guam", "Northern Mariana Islands")
+us_states_long <- us_states_long %>% filter(!(location %in% territories))
+```
+
+```{r}
+# Create rolling average changes
+# pivot wider
+# this will also be needed when we create lags
+us_states <- us_states_long %>%
+  # discard dates before cases were tracked.
+  filter(date > as.Date("2020-03-01")) %>%
+  pivot_wider(names_from = "data_type", values_from = "value") %>%
+  rename(state = location) %>%
+  select(date, state, cases_total, deaths_total) %>%
+  mutate(state = as_factor(state)) %>%
+  arrange(state, date) %>%
+  group_by(state) %>%
+  # smooth the data with 7 day moving average
+  mutate(cases_7day = (cases_total - lag(cases_total, 7)) / 7) %>%
+  mutate(deaths_7day = (deaths_total - lag(deaths_total, 7)) / 7)
+
+# national analysis
+# ----------------------------------------------
+# aggregate state to national
+us <- us_states %>%
+  group_by(date) %>%
+  summarize(across(
+    .cols = where(is.double),
+    .fns = function(x) sum(x, na.rm = T),
+    .names = "{col}"
+  ))
+
+# create columns for deaths led 0 to 40 days ahead
+max_lead <- 40
+us_lags <- us %>%
+  # create lags by day
+  tk_augment_lags(deaths_7day, .lags = 0:-max_lead, .names = "auto")
+# fix names to remove minus sign
+names(us_lags) <- names(us_lags) %>% str_replace_all("lag-|lag", "lead")
+
+# use only case dates where we have complete future knowledge of deaths for all lead times.
+us_lags <- us_lags %>% filter(date < cutoff_end - max_lead)
+
+```
+
+
+
+```{r}
+# make long form to nest
+# initialize models data frame
+models <- us_lags %>%
+  ungroup() %>%
+  pivot_longer(
+    cols = contains("lead"),
+    names_to = "lead",
+    values_to = "led_deaths"
+  ) %>%
+  select(date, cases_7day, lead, led_deaths) %>%
+  mutate(lead = as.numeric(str_remove(lead, "deaths_7day_lead"))) %>%
+  nest(data = c(date, cases_7day, led_deaths)) %>%
+  # Run a regression on lagged cases and date vs deaths
+  mutate(model = map(
+    data,
+    function(df) {
+      lm(led_deaths ~ cases_7day + poly(as.numeric(as.Date(date)), 2), data = df)
+    }
+  ))
+
+# Add regression coefficient
+# get adjusted r squared
+models <- models %>%
+  mutate(adj_r = map(model, function(x) {
+    glance(x) %>%
+      pull(adj.r.squared)
+  })
+  %>% unlist())
+print(models)
+```
+
+# Model Fit
+
+```{r}
+# Show model fit by lead time
+# make predictions using best model
+best_fit <- models %>%
+  summarize(adj_r = max(adj_r)) %>%
+  left_join(models, by = "adj_r")
+
+g <- models %>%
+  ggplot(aes(lead, adj_r)) +
+  geom_line() +
+  labs(
+    subtitle = paste("Best fit lead =", best_fit$lead, "days"),
+    title = "Model Fit By Lag Days",
+    x = "Lead Time in Days for Deaths",
+    caption = "Source: NY Times, Arthur Steinmetz",
+    y = "Adjusted R-squared"
+  )
+show(g)
+
+```
+
+# Main Plot
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-fatality-plot
+#| fig-cap: "COVID-19 fatalities, outputs from New York Times modeling."
+
+fatality <- best_fit$data[[1]] %>%
+  filter(cases_7day > 0) %>%
+  filter(date > as.Date("2020-04-15")) %>%
+  mutate(rate = led_deaths / cases_7day)
+
+g <- fatality %>% ggplot(aes(date, rate)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    x = "Date", y = "Fatality Rate",
+    title = "Fatality Rates are Creeping Up",
+    subtitle = "Fatality Rate as a Percentage of Lagged Cases",
+    caption = "Source: NY Times, Arthur Steinmetz"
+  ) +
+  scale_y_continuous(labels = scales::percent)
+show(g)
+```
+
+
