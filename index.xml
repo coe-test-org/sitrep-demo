@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
+and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+
+<front>
+
+
+<article-meta>
+
+
+<title-group>
+<article-title>Pathogen Genomics Center of Excellence Situation
+Report</article-title>
+</title-group>
+
+
+
+
+
+
+
+
+
+
+<history></history>
+
+
+
+
+
+
+</article-meta>
+
+</front>
+
+<body>
+<sec id="key-findings">
+  <title>Key Findings</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Current data reflects a mixture of JN.1 descendents as the
+      likely near term variants.
+      </p>
+    </list-item>
+    <list-item>
+      <p>Globally no other variants with unusual characteristics have
+      been identified as having unusual growth.</p>
+    </list-item>
+    <list-item>
+      <p>Some other point</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="situation-update-details">
+  <title>Situation Update Details</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Based on what - XYZ(?), JN.1 and descendents continue to
+      dominate. Some recombinations from JN.1 and other BA.5 variants
+      are being monitoredtracked, but have yet to show significant
+      growth relative other variants.</p>
+    </list-item>
+    <list-item>
+      <p>Together this diversity suggests steady evolution against
+      general population immunity with no indications of a variant
+      driven wave of COVID-19 infections.</p>
+    </list-item>
+    <list-item>
+      <p>As of MM/DD/YYYY, there were X samples from MM/DD/YYYY -
+      MM/DD/YYYY, some comment on trend</p>
+    </list-item>
+    <list-item>
+      <p>Some text here about image one. There is this variant that’s
+      here</p>
+    </list-item>
+    <list-item>
+      <p>Some text about image two</p>
+    </list-item>
+    <list-item>
+      <p>Image 3 has this</p>
+    </list-item>
+    <list-item>
+      <p>Findings from a site’s analysis of national data</p>
+    </list-item>
+  </list>
+  <fig id="fig-countprop">
+    <caption><p>Figure 1: Proportion of variants by year.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-nwcoe-fig-countprop-output-1.png" />
+  </fig>
+  <fig id="fig-state-analysis">
+    <caption><p>Figure 2: From the New York Times: A couple of
+    observations are obvious. First when cases start to rise, deaths
+    follow with a lag. Second, we have had three spikes in cases so far
+    and in each successive instance the mortality has risen by a smaller
+    amount. This suggests that, thankfully, we are getting better at
+    treating this disease. It is NOT a function of increased testing
+    because positivity rates have not been falling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-necoe-fig-state-analysis-output-2.png" />
+  </fig>
+  <fig id="fig-fatality-plot">
+    <caption><p>Figure 3: COVID-19 fatalities, outputs from New York
+    Times modeling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-vacoe-fig-fatality-plot-output-2.png" />
+  </fig>
+</sec>
+<sec id="site-summaries">
+  <title>Site Summaries</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Washington State Department of Health - highest variant
+      proportion is 50%</p>
+    </list-item>
+    <list-item>
+      <p>Georgia Department of Public Health probablity of detection: 60
+      and the consensus genomes are uploaded to public repositories like
+      GISAID and GenBank.</p>
+    </list-item>
+    <list-item>
+      <p>Massachusetts Department of Health prop - 50</p>
+    </list-item>
+    <list-item>
+      <p>Virginia Deparment of Health - 60%</p>
+    </list-item>
+  </list>
+  <sec id="section">
+    <title>Section</title>
+    <p>This is a simple placeholder for the manuscript’s main document
+    (<xref alt="Knuth 1984" rid="ref-knuth84" ref-type="bibr">Knuth
+    1984</xref>).</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>To monitor SARS-CoV-2 in Washington state, Washington state
+        Department of Health (WA DOH) implemented a Sentinel
+        Surveillance system, a type of genomic surveillance that tracks
+        SARS-CoV-2 variants across the state.</p>
+      </list-item>
+      <list-item>
+        <p>Laboratories across the state, including the Washington state
+        Public Health Laboratories (PHL) will sequence SARS-CoV-2 from
+        collected specimens. Raw sequencing data is assembled into
+        consensus genomes using publicly available bioinformatics
+        pipeline, and the consensus genomes are uploaded to public
+        repositories like GISAID and GenBank. This report demonstrates
+        how the NW PGCoE utilizes SARS-CoV-2 sequencing data to monitor
+        emerging variants biweekly, forecast emerging SARS-CoV-2
+        variants, and infers relative abundance estimates of SARS-CoV-2
+        variants in the wastewater. Previous work that looked at the
+        disease severity of SARS-CoV-2 variants is currently being
+        implemented to analyze the disease severity of current variants
+        utilizing hospitalization data. This work is ongoing and will be
+        presented at a later time.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-knuth84">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Knuth</surname><given-names>Donald E.</given-names></name>
+      </person-group>
+      <article-title>Literate programming</article-title>
+      <source>Comput. J.</source>
+      <publisher-name>Oxford University Press, Inc.</publisher-name>
+      <publisher-loc>USA</publisher-loc>
+      <year iso-8601-date="1984-05">1984</year><month>05</month>
+      <volume>27</volume>
+      <issue>2</issue>
+      <issn>0010-4620</issn>
+      <uri>https://doi.org/10.1093/comjnl/27.2.97</uri>
+      <pub-id pub-id-type="doi">10.1093/comjnl/27.2.97</pub-id>
+      <fpage>97</fpage>
+      <lpage>111</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+<sub-article article-type="notebook" id="nb-16-nb-article">
+<front-stub>
+<title-group>
+<article-title>Pathogen Genomics Center of Excellence Situation
+Report</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="key-findings-nb-article">
+  <title>Key Findings</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Current data reflects a mixture of JN.1 descendents as the
+      likely near term variants.
+      </p>
+    </list-item>
+    <list-item>
+      <p>Globally no other variants with unusual characteristics have
+      been identified as having unusual growth.</p>
+    </list-item>
+    <list-item>
+      <p>Some other point</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="situation-update-details-nb-article">
+  <title>Situation Update Details</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Based on what - XYZ(?), JN.1 and descendents continue to
+      dominate. Some recombinations from JN.1 and other BA.5 variants
+      are being monitoredtracked, but have yet to show significant
+      growth relative other variants.</p>
+    </list-item>
+    <list-item>
+      <p>Together this diversity suggests steady evolution against
+      general population immunity with no indications of a variant
+      driven wave of COVID-19 infections.</p>
+    </list-item>
+    <list-item>
+      <p>As of MM/DD/YYYY, there were X samples from MM/DD/YYYY -
+      MM/DD/YYYY, some comment on trend</p>
+    </list-item>
+    <list-item>
+      <p>Some text here about image one. There is this variant that’s
+      here</p>
+    </list-item>
+    <list-item>
+      <p>Some text about image two</p>
+    </list-item>
+    <list-item>
+      <p>Image 3 has this</p>
+    </list-item>
+    <list-item>
+      <p>Findings from a site’s analysis of national data</p>
+    </list-item>
+  </list>
+  <sec id="cell-fig-countprop-nb-article" specific-use="notebook-code">
+  <code language="python"># ----- Make Variant Plot ----- #
+
+## ---- var-plot
+(
+  variants %&gt;%
+    ggplot(aes(y=seven_day_percent,
+               x=group_label,
+               fill=variant,
+               label=percent_label)) +
+    geom_bar(position=&quot;stack&quot;, stat=&quot;identity&quot;) +
+    geom_text(
+      aes(
+        label=ifelse(
+          seven_day_percent&gt;4.0,
+          percent_label,
+          &quot;&quot;
+          )
+        ),
+      size = 3,
+      position = position_stack(vjust = 0.5),
+      color=&quot;white&quot;) +
+    scale_fill_viridis_d(na.value = &quot;red&quot;) +
+    # Add percent sign 
+    scale_y_continuous(labels = function(x) paste0(x, &quot;%&quot;)) +
+    labs(
+         # Without the caption, the dates get cut off in the email..
+         caption = &quot;&quot;,
+         x = &quot;Specimen Collection Date&quot;,
+         y = &quot;&quot;,
+         title = &quot;&lt;b&gt;&lt;span style = 'font-size:14pt;'&gt;Statewide COVID-19 Variants: Last 12 Weeks&lt;/span&gt;&lt;/b&gt;&lt;br&gt;This chart shows the percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks. Knowing how the virus is changing and which variants are found helps inform our public health response, which includes developing and recommending effective vaccines and treatments&quot;) +
+    theme_bw() +
+    theme(
+      # take out the default background
+      strip.background  = element_blank(),
+      # Adjust where the legend is an put a sick background behind it
+      legend.position = 'right',
+      legend.background = element_rect(fill = &quot;lightblue&quot;,
+                                       linetype = &quot;solid&quot;,
+                                       color = &quot;darkblue&quot;,
+                                       linewidth = 1),
+      legend.direction = &quot;vertical&quot;, legend.box = &quot;horizontal&quot;,
+      plot.title.position = &quot;plot&quot;,
+      plot.title = element_textbox_simple(
+        maxwidth = unit(6,&quot;in&quot;),
+        hjust = .0005,
+        size = 10,
+        padding = margin(5.5, 5.5, 5.5, 5.5),
+        margin = margin(0, 0, 5.5, 0),
+        fill = &quot;cornsilk&quot;
+      )) +
+    # Again adjust where the legend should be and how it should be labeled
+    guides(fill = guide_legend(title = &quot;Variants&quot;, 
+                               title.position = &quot;top&quot;,
+                               title.hjust = .5,
+                               byrow = TRUE,
+                               override.aes = list(size=5.5)),
+           size = guide_legend( )) 
+)
+
+## ---- stop</code>
+  <sec id="cell-fig-countprop-output-0-nb-article" specific-use="notebook-output">
+  <fig id="fig-countprop-nb-article">
+    <caption><p>Figure 1: Proportion of variants by year.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-nwcoe-fig-countprop-output-1.png" />
+  </fig>
+  </sec>
+  </sec>
+  <sec id="cell-fig-state-analysis-nb-article" specific-use="notebook-code">
+  <code language="python"># ------------------------------------------
+# state by state analysis
+
+coeff &lt;- 30
+state_subset &lt;- c(&quot;Washington&quot;, &quot;Massachusetts&quot;, &quot;Georgia&quot;, &quot;Minnesota&quot;, &quot;Virginia&quot;)
+
+# illustrate selected states
+g &lt;- us_states %&gt;%
+  filter(state %in% state_subset) %&gt;%
+  ggplot(aes(date, cases_7day)) +
+  geom_line(color = &quot;orange&quot;) +
+  facet_wrap(~state, scales = &quot;free&quot;) +
+  theme(legend.position = &quot;none&quot;) +
+  geom_line(aes(y = deaths_7day * coeff), color = &quot;red&quot;) +
+  scale_y_continuous(
+    labels = scales::comma,
+    name = &quot;Cases&quot;,
+    sec.axis = sec_axis(deaths_7day ~ . / coeff,
+      name = &quot;Deaths&quot;,
+      labels = scales::comma
+    )
+  ) +
+  theme(
+    axis.title.y = element_text(color = &quot;orange&quot;, size = 13),
+    axis.title.y.right = element_text(color = &quot;red&quot;, size = 13)
+  ) +
+  labs(
+    title = &quot;U.S. Cases vs. Deaths&quot;,
+    subtitle = &quot;7-Day Average&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;,
+    x = &quot;Date&quot;
+  )
+show(g)</code>
+  <sec id="cell-fig-state-analysis-output-0-nb-article" specific-use="notebook-output">
+  <preformat>Warning: Removed 7 rows containing missing values or values outside the scale range
+(`geom_line()`).
+Removed 7 rows containing missing values or values outside the scale range
+(`geom_line()`).</preformat>
+  </sec>
+  <sec id="cell-fig-state-analysis-output-1-nb-article" specific-use="notebook-output">
+  <fig id="fig-state-analysis-nb-article">
+    <caption><p>Figure 2: From the New York Times: A couple of
+    observations are obvious. First when cases start to rise, deaths
+    follow with a lag. Second, we have had three spikes in cases so far
+    and in each successive instance the mortality has risen by a smaller
+    amount. This suggests that, thankfully, we are getting better at
+    treating this disease. It is NOT a function of increased testing
+    because positivity rates have not been falling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-necoe-fig-state-analysis-output-2.png" />
+  </fig>
+  </sec>
+  </sec>
+  <sec id="cell-fig-fatality-plot-nb-article" specific-use="notebook-code">
+  <code language="python">fatality &lt;- best_fit$data[[1]] %&gt;%
+  filter(cases_7day &gt; 0) %&gt;%
+  filter(date &gt; as.Date(&quot;2020-04-15&quot;)) %&gt;%
+  mutate(rate = led_deaths / cases_7day)
+
+g &lt;- fatality %&gt;% ggplot(aes(date, rate)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    x = &quot;Date&quot;, y = &quot;Fatality Rate&quot;,
+    title = &quot;Fatality Rates are Creeping Up&quot;,
+    subtitle = &quot;Fatality Rate as a Percentage of Lagged Cases&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;
+  ) +
+  scale_y_continuous(labels = scales::percent)
+show(g)</code>
+  <sec id="cell-fig-fatality-plot-output-0-nb-article" specific-use="notebook-output">
+  <preformat>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</preformat>
+  </sec>
+  <sec id="cell-fig-fatality-plot-output-1-nb-article" specific-use="notebook-output">
+  <fig id="fig-fatality-plot-nb-article">
+    <caption><p>Figure 3: COVID-19 fatalities, outputs from New York
+    Times modeling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-vacoe-fig-fatality-plot-output-2.png" />
+  </fig>
+  </sec>
+  </sec>
+</sec>
+<sec id="site-summaries-nb-article">
+  <title>Site Summaries</title>
+  <sec id="nb-code-cell-1-nb-article" specific-use="notebook-code">
+  <code language="r script"># Here you can write code that can be used as inline text
+# See the variant proportions values below in the summary
+# Those values are not hard-coded/written. They will be automatically updated 
+# in the text whenever there is new data/a new render
+
+wa_prop &lt;- paste0(50,&quot;%&quot;)
+ga_prop &lt;- 60
+ne_prop &lt;- 50
+va_prop &lt;- paste0(60,&quot;%&quot;)</code>
+  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p>Washington State Department of Health - highest variant
+      proportion is 50%</p>
+    </list-item>
+    <list-item>
+      <p>Georgia Department of Public Health probablity of detection: 60
+      and the consensus genomes are uploaded to public repositories like
+      GISAID and GenBank.</p>
+    </list-item>
+    <list-item>
+      <p>Massachusetts Department of Health prop - 50</p>
+    </list-item>
+    <list-item>
+      <p>Virginia Deparment of Health - 60%</p>
+    </list-item>
+  </list>
+  <sec id="section-nb-article">
+    <title>Section</title>
+    <p>This is a simple placeholder for the manuscript’s main document
+    (<xref alt="Knuth 1984" rid="ref-knuth84-nb-article" ref-type="bibr">Knuth
+    1984</xref>).</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>To monitor SARS-CoV-2 in Washington state, Washington state
+        Department of Health (WA DOH) implemented a Sentinel
+        Surveillance system, a type of genomic surveillance that tracks
+        SARS-CoV-2 variants across the state.</p>
+      </list-item>
+      <list-item>
+        <p>Laboratories across the state, including the Washington state
+        Public Health Laboratories (PHL) will sequence SARS-CoV-2 from
+        collected specimens. Raw sequencing data is assembled into
+        consensus genomes using publicly available bioinformatics
+        pipeline, and the consensus genomes are uploaded to public
+        repositories like GISAID and GenBank. This report demonstrates
+        how the NW PGCoE utilizes SARS-CoV-2 sequencing data to monitor
+        emerging variants biweekly, forecast emerging SARS-CoV-2
+        variants, and infers relative abundance estimates of SARS-CoV-2
+        variants in the wastewater. Previous work that looked at the
+        disease severity of SARS-CoV-2 variants is currently being
+        implemented to analyze the disease severity of current variants
+        utilizing hospitalization data. This work is ongoing and will be
+        presented at a later time.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-knuth84-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Knuth</surname><given-names>Donald E.</given-names></name>
+      </person-group>
+      <article-title>Literate programming</article-title>
+      <source>Comput. J.</source>
+      <publisher-name>Oxford University Press, Inc.</publisher-name>
+      <publisher-loc>USA</publisher-loc>
+      <year iso-8601-date="1984-05">1984</year><month>05</month>
+      <volume>27</volume>
+      <issue>2</issue>
+      <issn>0010-4620</issn>
+      <uri>https://doi.org/10.1093/comjnl/27.2.97</uri>
+      <pub-id pub-id-type="doi">10.1093/comjnl/27.2.97</pub-id>
+      <fpage>97</fpage>
+      <lpage>111</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-4-nb-1">
+<front-stub>
+<title-group>
+<article-title>New England Genomics Center of Excellence</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="set-up-nb-1">
+  <title>Set up</title>
+  <p>This is just an example. We’re going to pull in covid data made
+  from the new york times</p>
+  <p><bold>FOR THIS TO WORK:</bold></p>
+  <list list-type="order">
+    <list-item>
+      <p>run <monospace>renv::install('devtools')</monospace> if it’s
+      not already installed</p>
+    </list-item>
+    <list-item>
+      <p>then
+      <monospace>devtools::install_github(&quot;covid19R/covid19nytimes&quot;)</monospace>
+      if it’s not already installed</p>
+    </list-item>
+  </list>
+  <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+  <code language="r script">knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+
+# correlate deaths and cases by state
+library(tidyverse)
+  </code>
+  <code language="r script">library(covid19nytimes)
+library(lubridate)
+library(broom)
+  </code>
+  <code language="r script">library(knitr)
+
+# source https://github.com/nytimes/covid-19-data.git
+us_states_long &lt;- covid19nytimes::refresh_covid19nytimes_states()
+
+# The following filter is to restrict the data to that originally posted at
+# https://outsiderdata.netlify.app/post/covid-cases-vs-deaths/
+# Should you wish to update the models with the latest data, remove the
+# following statement.
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt; ymd(&quot;2020-12-06&quot;))
+
+# if link is broken
+# load(&quot;../data/us_states_long.rdata&quot;)
+
+# use data from November 15 to stay consistent with text narrative
+cutoff_start &lt;- as.Date(&quot;2020-03-15&quot;) # not widespread enough until then
+cutoff_end &lt;- max(us_states_long$date) - 7 # discard last week since there are reporting lags
+
+us_states_long &lt;- us_states_long %&gt;% filter(date &gt;= cutoff_start)
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt;= cutoff_end)
+# Remove tiny territories
+territories &lt;- c(&quot;Guam&quot;, &quot;Northern Mariana Islands&quot;)
+us_states_long &lt;- us_states_long %&gt;% filter(!(location %in% territories))
+save(us_states_long, file = &quot;us_states_long.rdata&quot;)
+  </code>
+  <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
+  <preformat>Warning: package 'tidyverse' was built under R version 4.2.3</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
+  <preformat>Warning: package 'tidyr' was built under R version 4.2.3</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-2-nb-1" specific-use="notebook-output">
+  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-3-nb-1" specific-use="notebook-output">
+  <preformat>Warning: package 'broom' was built under R version 4.2.3</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="create-rolling-average-changes-nb-1">
+  <title>Create rolling average changes</title>
+  <sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
+  <code language="r script"># Create rolling average changes
+# pivot wider
+# this will also be needed when we create lags
+us_states &lt;- us_states_long %&gt;%
+  # discard dates before cases were tracked.
+  filter(date &gt; as.Date(&quot;2020-03-01&quot;)) %&gt;%
+  pivot_wider(names_from = &quot;data_type&quot;, values_from = &quot;value&quot;) %&gt;%
+  rename(state = location) %&gt;%
+  select(date, state, cases_total, deaths_total) %&gt;%
+  mutate(state = as_factor(state)) %&gt;%
+  arrange(state, date) %&gt;%
+  group_by(state) %&gt;%
+  # smooth the data with 7 day moving average
+  mutate(cases_7day = (cases_total - lag(cases_total, 7)) / 7) %&gt;%
+  mutate(deaths_7day = (deaths_total - lag(deaths_total, 7)) / 7)
+  </code>
+  </sec>
+  <sec id="cell-fig-state-analysis-nb-1" specific-use="notebook-code">
+  <code language="r script">
+# ------------------------------------------
+# state by state analysis
+
+coeff &lt;- 30
+state_subset &lt;- c(&quot;Washington&quot;, &quot;Massachusetts&quot;, &quot;Georgia&quot;, &quot;Minnesota&quot;, &quot;Virginia&quot;)
+
+# illustrate selected states
+g &lt;- us_states %&gt;%
+  filter(state %in% state_subset) %&gt;%
+  ggplot(aes(date, cases_7day)) +
+  geom_line(color = &quot;orange&quot;) +
+  facet_wrap(~state, scales = &quot;free&quot;) +
+  theme(legend.position = &quot;none&quot;) +
+  geom_line(aes(y = deaths_7day * coeff), color = &quot;red&quot;) +
+  scale_y_continuous(
+    labels = scales::comma,
+    name = &quot;Cases&quot;,
+    sec.axis = sec_axis(deaths_7day ~ . / coeff,
+      name = &quot;Deaths&quot;,
+      labels = scales::comma
+    )
+  ) +
+  theme(
+    axis.title.y = element_text(color = &quot;orange&quot;, size = 13),
+    axis.title.y.right = element_text(color = &quot;red&quot;, size = 13)
+  ) +
+  labs(
+    title = &quot;U.S. Cases vs. Deaths&quot;,
+    subtitle = &quot;7-Day Average&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;,
+    x = &quot;Date&quot;
+  )
+show(g)
+  </code>
+  <fig id="fig-state-analysis-nb-1">
+    <caption><p>From the New York Times: A couple of observations are
+    obvious. First when cases start to rise, deaths follow with a lag.
+    Second, we have had three spikes in cases so far and in each
+    successive instance the mortality has risen by a smaller amount.
+    This suggests that, thankfully, we are getting better at treating
+    this disease. It is NOT a function of increased testing because
+    positivity rates have not been falling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="necoe_files/figure-jats/fig-state-analysis-1.png" />
+  </fig>
+  <sec id="cell-fig-state-analysis-output-0-nb-1" specific-use="notebook-output">
+  <preformat>Warning: Removed 7 rows containing missing values or values outside the scale range
+(`geom_line()`).
+Removed 7 rows containing missing values or values outside the scale range
+(`geom_line()`).</preformat>
+  </sec>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-8-nb-2">
+<front-stub>
+<title-group>
+<article-title>NorthWest Genomics Center of Excellence</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="set-up-nb-2">
+  <title>Set Up</title>
+  <p>This project uses an R environment (<monospace>renv</monospace>) to
+  save all the packages/versions used in the scripts.</p>
+  <p>To install the packages;</p>
+  <list list-type="order">
+    <list-item>
+      <p>Please upgrade to <monospace>renv</monospace> version 1.0.5 or
+      higher</p>
+    </list-item>
+    <list-item>
+      <p>At the root of the project/your local clone, run
+      <monospace>renv::restore()</monospace></p>
+    </list-item>
+    <list-item>
+      <p>This should install all the packages required</p>
+    </list-item>
+  </list>
+  <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
+  <code language="r script"># ----- Load Libraries ----- #
+## ---- libraries
+library(pacman)
+  </code>
+  <code language="r script">p_load(
+  fs,
+  lubridate,
+  dplyr,
+  stringr,
+  magrittr,
+  readr,
+  httr,
+  readxl,
+  ggplot2,
+  ggtext,
+  ggthemes,
+  forcats,
+  here
+)
+## ---- stop
+  </code>
+  <sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
+  <preformat>Warning: package 'pacman' was built under R version 4.2.3</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="read-in-doh-data-nb-2">
+  <title>Read in DOH Data</title>
+  <p>These data are public and can be found on the WA DOH resp illness
+  dashboard
+  <ext-link ext-link-type="uri" xlink:href="https://doh.wa.gov/data-and-statistical-reports/diseases-and-chronic-conditions/communicable-disease-surveillance-data/respiratory-illness-data-dashboard#downloads">under
+  sequencing/variants</ext-link></p>
+  <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
+  <code language="r script"># ----- Pull DOH Public Dashboard Data ----- #
+
+## ---- pull-data
+(
+  variants &lt;- read_xlsx(file.path(&quot;data/Downloadable_variant.xlsx&quot;)) %&gt;%
+    rename(c(&quot;start_date&quot; = `Start Date`,
+             &quot;end_date&quot; = `End Date`,
+             &quot;variant&quot; = `Variant`,
+             &quot;seven_day_count&quot; = `7-Day Sequence Count`,
+             &quot;seven_day_percent&quot; = `7-Day Percent`,
+             &quot;datetime&quot; = `Date/Time Updated`)) %&gt;%
+    # make the date ranges for the plot
+    # group each date range
+    group_by(start_date,end_date) %&gt;%
+    # assign each date range an id wtih dplyr::cur_group_id()
+    mutate(group_id = cur_group_id()) %&gt;%
+    # create labels for the groups
+    mutate(group_label = paste(start_date, &quot; - \n&quot;, end_date)) %&gt;%
+    # add % to the percent labels
+    mutate(percent_label = paste0(seven_day_percent,&quot;%&quot;)) %&gt;%
+    ungroup()
+)
+  </code>
+  <code language="r script">## ---- stop
+  </code>
+  <sec id="nb-code-cell-2-output-0-nb-2" specific-use="notebook-output">
+  <preformat># A tibble: 78 × 9
+   start_date          end_date            variant    seven_day_count
+   &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt;                &lt;dbl&gt;
+ 1 2023-04-30 00:00:00 2023-05-13 00:00:00 BA.2.75                  2
+ 2 2023-04-30 00:00:00 2023-05-13 00:00:00 BA.5                     1
+ 3 2023-04-30 00:00:00 2023-05-13 00:00:00 BN.1                     1
+ 4 2023-04-30 00:00:00 2023-05-13 00:00:00 CH.1.1                   4
+ 5 2023-04-30 00:00:00 2023-05-13 00:00:00 EG.5                     2
+ 6 2023-04-30 00:00:00 2023-05-13 00:00:00 XBB                      8
+ 7 2023-04-30 00:00:00 2023-05-13 00:00:00 XBB.1.16                27
+ 8 2023-04-30 00:00:00 2023-05-13 00:00:00 XBB.1.16.1               7
+ 9 2023-04-30 00:00:00 2023-05-13 00:00:00 XBB.1.5                 90
+10 2023-04-30 00:00:00 2023-05-13 00:00:00 XBB.1.5.1                2
+# ℹ 68 more rows
+# ℹ 5 more variables: seven_day_percent &lt;dbl&gt;, datetime &lt;dttm&gt;, group_id &lt;int&gt;,
+#   group_label &lt;chr&gt;, percent_label &lt;chr&gt;</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="variant-plot-nb-2">
+  <title>Variant Plot</title>
+  <p>This should produce a similar variant plot to what’s in the
+  dashboard</p>
+  <sec id="cell-fig-countprop-nb-2" specific-use="notebook-code">
+  <code language="r script">
+# ----- Make Variant Plot ----- #
+
+## ---- var-plot
+(
+  variants %&gt;%
+    ggplot(aes(y=seven_day_percent,
+               x=group_label,
+               fill=variant,
+               label=percent_label)) +
+    geom_bar(position=&quot;stack&quot;, stat=&quot;identity&quot;) +
+    geom_text(
+      aes(
+        label=ifelse(
+          seven_day_percent&gt;4.0,
+          percent_label,
+          &quot;&quot;
+          )
+        ),
+      size = 3,
+      position = position_stack(vjust = 0.5),
+      color=&quot;white&quot;) +
+    scale_fill_viridis_d(na.value = &quot;red&quot;) +
+    # Add percent sign 
+    scale_y_continuous(labels = function(x) paste0(x, &quot;%&quot;)) +
+    labs(
+         # Without the caption, the dates get cut off in the email..
+         caption = &quot;&quot;,
+         x = &quot;Specimen Collection Date&quot;,
+         y = &quot;&quot;,
+         title = &quot;&lt;b&gt;&lt;span style = 'font-size:14pt;'&gt;Statewide COVID-19 Variants: Last 12 Weeks&lt;/span&gt;&lt;/b&gt;&lt;br&gt;This chart shows the percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks. Knowing how the virus is changing and which variants are found helps inform our public health response, which includes developing and recommending effective vaccines and treatments&quot;) +
+    theme_bw() +
+    theme(
+      # take out the default background
+      strip.background  = element_blank(),
+      # Adjust where the legend is an put a sick background behind it
+      legend.position = 'right',
+      legend.background = element_rect(fill = &quot;lightblue&quot;,
+                                       linetype = &quot;solid&quot;,
+                                       color = &quot;darkblue&quot;,
+                                       linewidth = 1),
+      legend.direction = &quot;vertical&quot;, legend.box = &quot;horizontal&quot;,
+      plot.title.position = &quot;plot&quot;,
+      plot.title = element_textbox_simple(
+        maxwidth = unit(6,&quot;in&quot;),
+        hjust = .0005,
+        size = 10,
+        padding = margin(5.5, 5.5, 5.5, 5.5),
+        margin = margin(0, 0, 5.5, 0),
+        fill = &quot;cornsilk&quot;
+      )) +
+    # Again adjust where the legend should be and how it should be labeled
+    guides(fill = guide_legend(title = &quot;Variants&quot;, 
+                               title.position = &quot;top&quot;,
+                               title.hjust = .5,
+                               byrow = TRUE,
+                               override.aes = list(size=5.5)),
+           size = guide_legend( )) 
+)
+
+## ---- stop
+  </code>
+  <fig id="fig-countprop-nb-2">
+    <caption><p>Proportion of variants by year.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="nwcoe_files/figure-jats/fig-countprop-1.png" />
+  </fig>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-12-nb-3">
+<front-stub>
+<title-group>
+<article-title>Virginia Genomics Center of Excellence</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="nb-code-cell-1-nb-3" specific-use="notebook-code">
+<code language="r script"># correlate deaths and cases by state
+library(tidyverse)
+</code>
+<code language="r script">library(covid19nytimes)
+library(lubridate)
+library(broom)
+</code>
+<code language="r script">library(knitr)
+library(timetk)
+
+# source https://github.com/nytimes/covid-19-data.git
+us_states_long &lt;- covid19nytimes::refresh_covid19nytimes_states()
+
+# The following filter is to restrict the data to that originally posted at
+# https://outsiderdata.netlify.app/post/covid-cases-vs-deaths/
+# Should you wish to update the models with the latest data, remove the
+# following statement.
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt; ymd(&quot;2020-12-06&quot;))
+
+# if link is broken
+# load(&quot;../data/us_states_long.rdata&quot;)
+
+# use data from November 15 to stay consistent with text narrative
+cutoff_start &lt;- as.Date(&quot;2020-03-15&quot;) # not widespread enough until then
+cutoff_end &lt;- max(us_states_long$date) - 7 # discard last week since there are reporting lags
+
+us_states_long &lt;- us_states_long %&gt;% filter(date &gt;= cutoff_start)
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt;= cutoff_end)
+# Remove tiny territories
+territories &lt;- c(&quot;Guam&quot;, &quot;Northern Mariana Islands&quot;)
+us_states_long &lt;- us_states_long %&gt;% filter(!(location %in% territories))
+</code>
+<sec id="nb-code-cell-1-output-0-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'tidyverse' was built under R version 4.2.3</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-1-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'tidyr' was built under R version 4.2.3</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-2-nb-3" specific-use="notebook-output">
+<preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-3-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'broom' was built under R version 4.2.3</preformat>
+</sec>
+</sec>
+<sec id="nb-code-cell-2-nb-3" specific-use="notebook-code">
+<code language="r script"># Create rolling average changes
+# pivot wider
+# this will also be needed when we create lags
+us_states &lt;- us_states_long %&gt;%
+  # discard dates before cases were tracked.
+  filter(date &gt; as.Date(&quot;2020-03-01&quot;)) %&gt;%
+  pivot_wider(names_from = &quot;data_type&quot;, values_from = &quot;value&quot;) %&gt;%
+  rename(state = location) %&gt;%
+  select(date, state, cases_total, deaths_total) %&gt;%
+  mutate(state = as_factor(state)) %&gt;%
+  arrange(state, date) %&gt;%
+  group_by(state) %&gt;%
+  # smooth the data with 7 day moving average
+  mutate(cases_7day = (cases_total - lag(cases_total, 7)) / 7) %&gt;%
+  mutate(deaths_7day = (deaths_total - lag(deaths_total, 7)) / 7)
+
+# national analysis
+# ----------------------------------------------
+# aggregate state to national
+us &lt;- us_states %&gt;%
+  group_by(date) %&gt;%
+  summarize(across(
+    .cols = where(is.double),
+    .fns = function(x) sum(x, na.rm = T),
+    .names = &quot;{col}&quot;
+  ))
+
+# create columns for deaths led 0 to 40 days ahead
+max_lead &lt;- 40
+us_lags &lt;- us %&gt;%
+  # create lags by day
+  tk_augment_lags(deaths_7day, .lags = 0:-max_lead, .names = &quot;auto&quot;)
+# fix names to remove minus sign
+names(us_lags) &lt;- names(us_lags) %&gt;% str_replace_all(&quot;lag-|lag&quot;, &quot;lead&quot;)
+
+# use only case dates where we have complete future knowledge of deaths for all lead times.
+us_lags &lt;- us_lags %&gt;% filter(date &lt; cutoff_end - max_lead)
+</code>
+</sec>
+<sec id="nb-code-cell-3-nb-3" specific-use="notebook-code">
+<code language="r script"># make long form to nest
+# initialize models data frame
+models &lt;- us_lags %&gt;%
+  ungroup() %&gt;%
+  pivot_longer(
+    cols = contains(&quot;lead&quot;),
+    names_to = &quot;lead&quot;,
+    values_to = &quot;led_deaths&quot;
+  ) %&gt;%
+  select(date, cases_7day, lead, led_deaths) %&gt;%
+  mutate(lead = as.numeric(str_remove(lead, &quot;deaths_7day_lead&quot;))) %&gt;%
+  nest(data = c(date, cases_7day, led_deaths)) %&gt;%
+  # Run a regression on lagged cases and date vs deaths
+  mutate(model = map(
+    data,
+    function(df) {
+      lm(led_deaths ~ cases_7day + poly(as.numeric(as.Date(date)), 2), data = df)
+    }
+  ))
+
+# Add regression coefficient
+# get adjusted r squared
+models &lt;- models %&gt;%
+  mutate(adj_r = map(model, function(x) {
+    glance(x) %&gt;%
+      pull(adj.r.squared)
+  })
+  %&gt;% unlist())
+print(models)
+</code>
+<sec id="nb-code-cell-3-output-0-nb-3" specific-use="notebook-output">
+<preformat># A tibble: 41 × 4
+    lead data               model  adj_r
+   &lt;dbl&gt; &lt;list&gt;             &lt;list&gt; &lt;dbl&gt;
+ 1     0 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.164
+ 2     1 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.187
+ 3     2 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.212
+ 4     3 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.241
+ 5     4 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.272
+ 6     5 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.307
+ 7     6 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.343
+ 8     7 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.383
+ 9     8 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.424
+10     9 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.467
+# ℹ 31 more rows</preformat>
+</sec>
+</sec>
+<sec id="model-fit-nb-3">
+  <title>Model Fit</title>
+  <sec id="nb-code-cell-4-nb-3" specific-use="notebook-code">
+  <code language="r script"># Show model fit by lead time
+# make predictions using best model
+best_fit &lt;- models %&gt;%
+  summarize(adj_r = max(adj_r)) %&gt;%
+  left_join(models, by = &quot;adj_r&quot;)
+
+g &lt;- models %&gt;%
+  ggplot(aes(lead, adj_r)) +
+  geom_line() +
+  labs(
+    subtitle = paste(&quot;Best fit lead =&quot;, best_fit$lead, &quot;days&quot;),
+    title = &quot;Model Fit By Lag Days&quot;,
+    x = &quot;Lead Time in Days for Deaths&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;,
+    y = &quot;Adjusted R-squared&quot;
+  )
+show(g)
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/unnamed-chunk-4-1.png" />
+  </sec>
+</sec>
+<sec id="main-plot-nb-3">
+  <title>Main Plot</title>
+  <sec id="cell-fig-fatality-plot-nb-3" specific-use="notebook-code">
+  <code language="r script">
+fatality &lt;- best_fit$data[[1]] %&gt;%
+  filter(cases_7day &gt; 0) %&gt;%
+  filter(date &gt; as.Date(&quot;2020-04-15&quot;)) %&gt;%
+  mutate(rate = led_deaths / cases_7day)
+
+g &lt;- fatality %&gt;% ggplot(aes(date, rate)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    x = &quot;Date&quot;, y = &quot;Fatality Rate&quot;,
+    title = &quot;Fatality Rates are Creeping Up&quot;,
+    subtitle = &quot;Fatality Rate as a Percentage of Lagged Cases&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;
+  ) +
+  scale_y_continuous(labels = scales::percent)
+show(g)
+  </code>
+  <fig id="fig-fatality-plot-nb-3">
+    <caption><p>COVID-19 fatalities, outputs from New York Times
+    modeling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/fig-fatality-plot-1.png" />
+  </fig>
+  <sec id="cell-fig-fatality-plot-output-0-nb-3" specific-use="notebook-output">
+  <preformat>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</preformat>
+  </sec>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+
+</article>
