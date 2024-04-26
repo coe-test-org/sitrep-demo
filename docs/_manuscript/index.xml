@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
+and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+
+<front>
+
+
+<article-meta>
+
+
+<title-group>
+<article-title>Pathogen Genomics Center of Excellence Situation
+Report</article-title>
+</title-group>
+
+
+
+
+
+
+
+
+
+
+<history></history>
+
+
+
+
+
+
+</article-meta>
+
+</front>
+
+<body>
+<sec id="key-findings">
+  <title>Key Findings</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Current data reflects a mixture of JN.1 descendents as the
+      likely near term variants.
+      </p>
+    </list-item>
+    <list-item>
+      <p>Globally no other variants with unusual characteristics have
+      been identified as having unusual growth.</p>
+    </list-item>
+    <list-item>
+      <p>Some other point</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="situation-update-details">
+  <title>Situation Update Details</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Based on what - XYZ(?), JN.1 and descendents continue to
+      dominate. Some recombinations from JN.1 and other BA.5 variants
+      are being monitoredtracked, but have yet to show significant
+      growth relative other variants.</p>
+    </list-item>
+    <list-item>
+      <p>Together this diversity suggests steady evolution against
+      general population immunity with no indications of a variant
+      driven wave of COVID-19 infections.</p>
+    </list-item>
+    <list-item>
+      <p>As of MM/DD/YYYY, there were X samples from MM/DD/YYYY -
+      MM/DD/YYYY, some comment on trend</p>
+    </list-item>
+    <list-item>
+      <p>Some text here about image one. There is this variant that’s
+      here</p>
+    </list-item>
+    <list-item>
+      <p>Some text about image two</p>
+    </list-item>
+    <list-item>
+      <p>Image 3 has this</p>
+    </list-item>
+    <list-item>
+      <p>Findings from a site’s analysis of national data</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="background">
+  <title>Background</title>
+  <p>To monitor SARS-CoV-2 in Washington state, Washington state
+  Department of Health (WA DOH) implemented a Sentinel Surveillance
+  system, a type of genomic surveillance that tracks SARS-CoV-2 variants
+  across the state. Laboratories across the state, including the
+  Washington state Public Health Laboratories (PHL) will sequence
+  SARS-CoV-2 from collected specimens. Raw sequencing data is assembled
+  into consensus genomes using publicly available bioinformatics
+  pipeline, and the consensus genomes are uploaded to public
+  repositories like GISAID and GenBank. This report demonstrates how the
+  NW PGCoE utilizes SARS-CoV-2 sequencing data to monitor emerging
+  variants biweekly, forecast emerging SARS-CoV-2 variants, and infers
+  relative abundance estimates of SARS-CoV-2 variants in the wastewater.
+  Previous work that looked at the disease severity of SARS-CoV-2
+  variants is currently being implemented to analyze the disease
+  severity of current variants utilizing hospitalization data. This work
+  is ongoing and will be presented at a later time.</p>
+  <sec id="section">
+    <title>Section</title>
+    <p>This is a simple placeholder for the manuscript’s main document
+    (<xref alt="Knuth 1984" rid="ref-knuth84" ref-type="bibr">Knuth
+    1984</xref>).</p>
+  </sec>
+</sec>
+</body>
+
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-knuth84">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Knuth</surname><given-names>Donald E.</given-names></name>
+      </person-group>
+      <article-title>Literate programming</article-title>
+      <source>Comput. J.</source>
+      <publisher-name>Oxford University Press, Inc.</publisher-name>
+      <publisher-loc>USA</publisher-loc>
+      <year iso-8601-date="1984-05">1984</year><month>05</month>
+      <volume>27</volume>
+      <issue>2</issue>
+      <issn>0010-4620</issn>
+      <uri>https://doi.org/10.1093/comjnl/27.2.97</uri>
+      <pub-id pub-id-type="doi">10.1093/comjnl/27.2.97</pub-id>
+      <fpage>97</fpage>
+      <lpage>111</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+
+</article>

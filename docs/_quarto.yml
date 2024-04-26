@@ -1,0 +1,31 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    theme: assets/styles.scss
+    comments:
+      hypothesis: true
+    title-block-style: manuscript
+  docx: default
+  jats: default
+  pdf:
+    output-file: "report"
+    output-ext:  "pdf"
+    linkcolor: RSSblue
+    urlcolor: RSSblue
+    documentclass: article
+    classoption: [twocolumn]
+    include-in-header: 
+       - "assets/styles.tex"
+    theme: assets/styles.scss
+
+
+execute:
+  freeze: true
+
+
+

@@ -1,0 +1,40 @@
+% load packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+
+%% Set page size with a wider right margin
+\geometry{a4paper, left=10mm, top=10mm, bottom=10mm, right=10mm}
+
+
+%% Let's define some colours
+\definecolor{RSSyellow}{HTML}{d3a435}
+\definecolor{RSSblue}{HTML}{005573}
+
+%% Let's add a logo to the upper right
+% \AddToShipoutPicture{% 
+%      % logo
+%     \AtPageUpperLeft{% start the bar at the bottom right of the page
+%         \put(\LenToUnit{\dimexpr\paperwidth-2.25cm},27.2cm){% move it to the top right
+%             \color{white}\includegraphics[width=2cm]{images/cdc.png}
+%           }%
+%      }%
+% }
+
+\newcommand\UpperLeftImage{%
+     \put(5,\LenToUnit{\dimexpr\paperwidth + 50mm}){%
+          \includegraphics[width=2cm,height=2cm]{images/cdc.png}%
+     }%
+}
+
+\newcommand\UpperRightImage{%
+     \put(180mm,\LenToUnit{\dimexpr\paperwidth + 50mm}){%
+          \includegraphics[width=2cm,height=2cm]{images/cdc.png}%
+     }%
+}
+
+% Add images to every page
+\AddToShipoutPictureBG{%
+     \UpperLeftImage%
+     \UpperRightImage%
+}
