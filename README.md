@@ -32,10 +32,12 @@ Using Quarto + Github Actions helps to:
 3. Reproducibility
    - Source code is all available and linked to the documentation
    - Users can see how we did our calculations
+   - Connects to Zotero and other citation software 
      
 4. Private data
    - raw data is kept private
    - each COE group can contribute code and push to github, triggered a re-render of their plots/calculations only
+   - may be good to use public data sources for fully reproducible reports
   
 5. Scalability
      - Can make parameterized reports
