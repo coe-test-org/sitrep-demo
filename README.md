@@ -5,6 +5,7 @@ A demo of the situation report
 - **A fully automated situational report.**
 - **It does not require manually editing of any text, figures, statistics, or plots since everything gets rendered via code.**
 - **Fully reproducible and can be scaled easily**
+- **Each COE site can contribute plots, figures, and statistics from their own datasources using their own software**
 
 # Links/Demo Formats
 - [pdf format using Typst](https://coe-test-org.github.io/sitrep-demo/typst-report.pdf)
