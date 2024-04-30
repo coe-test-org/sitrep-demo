@@ -3,10 +3,11 @@ project:
 
 manuscript:
   article: index.qmd
+  code-links: [repo, devcontainer, binder]
 
 format:
   html:
-    theme: assets/styles.scss
+    theme: cosmo
     comments:
       hypothesis: true
     title-block-style: manuscript
@@ -21,7 +22,19 @@ format:
     classoption: [twocolumn]
     include-in-header: 
        - "assets/styles.tex"
-    theme: assets/styles.scss
+  typst:
+    output-file: "typst-report"
+    output-ext:  "pdf"
+    columns: 2
+    template-partials:
+        - assets/typst-template.typ
+        - assets/typst-show.typ
+  # PrettyPDF-typst: 
+  #   columns: 2
+  #   papersize: iso-b3
+
+
+
 
 
 execute:

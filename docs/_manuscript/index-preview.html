@@ -227,7 +227,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Modified</div>
             <div class="quarto-title-meta-contents">
-              <p class="date-modified">April 26, 2024</p>
+              <p class="date-modified">April 30, 2024</p>
             </div>
           </div>
                 
@@ -247,11 +247,10 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
+  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link active" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
   <li><a href="#site-summaries" id="toc-site-summaries" class="nav-link" data-scroll-target="#site-summaries">Site Summaries</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">Section</a></li>
+  <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -260,93 +259,98 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="key-findings" class="level1">
-<h1>Key Findings</h1>
+       <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"JN.1"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>today_date <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <ul>
 <li>Current data reflects a mixture of JN.1 descendents as the likely near term variants.<br>
 </li>
 <li>Globally no other variants with unusual characteristics have been identified as having unusual growth.</li>
 <li>Some other point</li>
 </ul>
-</section>
 <section id="situation-update-details" class="level1">
 <h1>Situation Update Details</h1>
 <ul>
 <li>Based on what - XYZ(?), JN.1 and descendents continue to dominate. Some recombinations from JN.1 and other BA.5 variants are being monitoredtracked, but have yet to show significant growth relative other variants.</li>
 <li>Together this diversity suggests steady evolution against general population immunity with no indications of a variant driven wave of COVID-19 infections.</li>
-<li>As of MM/DD/YYYY, there were X samples from MM/DD/YYYY - MM/DD/YYYY, some comment on trend</li>
+<li>As of 2024-04-30, there were X samples from MM/DD/YYYY - MM/DD/YYYY, some comment on trend</li>
 <li>Some text here about image one. There is this variant that’s here</li>
 <li>Some text about image two</li>
 <li>Image 3 has this</li>
 <li>Findings from a site’s analysis of national data</li>
 </ul>
 <div class="quarto-embed-nb-cell" data-notebook="C:\Users\FAA3303\Projects\personal-repos\coe-test-org\sitrep-demo\docs\notebooks\nwcoe.qmd" data-notebook-title="NorthWest Genomics Center of Excellence" data-notebook-cellid="cell-fig-countprop">
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-fig-countprop" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ----- Make Variant Plot ----- #</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">## ---- var-plot</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  variants <span class="op">%&gt;%</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    ggplot(aes(y<span class="op">=</span>seven_day_percent,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>               x<span class="op">=</span>group_label,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>               fill<span class="op">=</span>variant,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span>percent_label)) <span class="op">+</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    geom_bar(position<span class="op">=</span><span class="st">"stack"</span>, stat<span class="op">=</span><span class="st">"identity"</span>) <span class="op">+</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    geom_text(</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      aes(</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span>ifelse(</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>          seven_day_percent<span class="op">&gt;</span><span class="fl">4.0</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>          percent_label,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">""</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      size <span class="op">=</span> <span class="dv">3</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      position <span class="op">=</span> position_stack(vjust <span class="op">=</span> <span class="fl">0.5</span>),</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      color<span class="op">=</span><span class="st">"white"</span>) <span class="op">+</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    scale_fill_viridis_d(na.value <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add percent sign </span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    scale_y_continuous(labels <span class="op">=</span> function(x) paste0(x, <span class="st">"%"</span>)) <span class="op">+</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    labs(</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Without the caption, the dates get cut off in the email..</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>         caption <span class="op">=</span> <span class="st">""</span>,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>         x <span class="op">=</span> <span class="st">"Specimen Collection Date"</span>,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>         y <span class="op">=</span> <span class="st">""</span>,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>         title <span class="op">=</span> <span class="st">"&lt;b&gt;&lt;span style = 'font-size:14pt;'&gt;Statewide COVID-19 Variants: Last 12 Weeks&lt;/span&gt;&lt;/b&gt;&lt;br&gt;This chart shows the percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks. Knowing how the virus is changing and which variants are found helps inform our public health response, which includes developing and recommending effective vaccines and treatments"</span>) <span class="op">+</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    theme_bw() <span class="op">+</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    theme(</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      <span class="co"># take out the default background</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      strip.background  <span class="op">=</span> element_blank(),</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Adjust where the legend is an put a sick background behind it</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      legend.position <span class="op">=</span> <span class="st">'right'</span>,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>      legend.background <span class="op">=</span> element_rect(fill <span class="op">=</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>                                       linetype <span class="op">=</span> <span class="st">"solid"</span>,</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>                                       color <span class="op">=</span> <span class="st">"darkblue"</span>,</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>                                       linewidth <span class="op">=</span> <span class="dv">1</span>),</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>      legend.direction <span class="op">=</span> <span class="st">"vertical"</span>, legend.box <span class="op">=</span> <span class="st">"horizontal"</span>,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      plot.title <span class="op">=</span> element_textbox_simple(</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        maxwidth <span class="op">=</span> unit(<span class="dv">6</span>,<span class="st">"in"</span>),</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        hjust <span class="op">=</span> <span class="fl">.0005</span>,</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        size <span class="op">=</span> <span class="dv">10</span>,</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        padding <span class="op">=</span> margin(<span class="fl">5.5</span>, <span class="fl">5.5</span>, <span class="fl">5.5</span>, <span class="fl">5.5</span>),</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        margin <span class="op">=</span> margin(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">5.5</span>, <span class="dv">0</span>),</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        fill <span class="op">=</span> <span class="st">"cornsilk"</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      )) <span class="op">+</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Again adjust where the legend should be and how it should be labeled</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    guides(fill <span class="op">=</span> guide_legend(title <span class="op">=</span> <span class="st">"Variants"</span>, </span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                               title.position <span class="op">=</span> <span class="st">"top"</span>,</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>                               title.hjust <span class="op">=</span> <span class="fl">.5</span>,</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                               byrow <span class="op">=</span> TRUE,</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                               override.aes <span class="op">=</span> <span class="bu">list</span>(size<span class="op">=</span><span class="fl">5.5</span>)),</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>           size <span class="op">=</span> guide_legend( )) </span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co">## ---- stop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-countprop" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># title = "&lt;b&gt;&lt;span style = 'font-size:14pt;'&gt;Statewide COVID-19 Variants: Last 12 Weeks&lt;/span&gt;&lt;/b&gt;&lt;br&gt;This chart shows the percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks. Knowing how the virus is changing and which variants are found helps inform our public health response, which includes developing and recommending effective vaccines and treatments")</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ----- Make Variant Plot ----- #</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">## ---- var-plot</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  variants <span class="op">%&gt;%</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ggplot(aes(y<span class="op">=</span>seven_day_percent,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>               x<span class="op">=</span>group_label,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>               fill<span class="op">=</span>variant,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span>percent_label)) <span class="op">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    geom_bar(position<span class="op">=</span><span class="st">"stack"</span>, stat<span class="op">=</span><span class="st">"identity"</span>) <span class="op">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    geom_text(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      aes(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span>ifelse(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          seven_day_percent<span class="op">&gt;</span><span class="fl">4.0</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>          percent_label,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>          <span class="st">""</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      size <span class="op">=</span> <span class="dv">3</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      position <span class="op">=</span> position_stack(vjust <span class="op">=</span> <span class="fl">0.5</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>      color<span class="op">=</span><span class="st">"white"</span>) <span class="op">+</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    scale_fill_viridis_d(na.value <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add percent sign </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    scale_y_continuous(labels <span class="op">=</span> function(x) paste0(x, <span class="st">"%"</span>)) <span class="op">+</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    labs(</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Without the caption, the dates get cut off in the email..</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>         caption <span class="op">=</span> <span class="st">""</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>         x <span class="op">=</span> <span class="st">"Specimen Collection Date"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>         y <span class="op">=</span> <span class="st">""</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>         title <span class="op">=</span> <span class="st">"Statewide COVID-19 Variants: Last 12 Weeks"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>         subtitle <span class="op">=</span> <span class="st">"Percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks."</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>         ) <span class="op">+</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    theme_bw() <span class="op">+</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>      <span class="co"># take out the default background</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>      strip.background  <span class="op">=</span> element_blank(),</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Adjust where the legend is an put a sick background behind it</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>      legend.position <span class="op">=</span> <span class="st">'right'</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>      legend.background <span class="op">=</span> element_rect(fill <span class="op">=</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                                       linetype <span class="op">=</span> <span class="st">"solid"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>                                       color <span class="op">=</span> <span class="st">"darkblue"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>                                       linewidth <span class="op">=</span> <span class="dv">1</span>),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>      legend.direction <span class="op">=</span> <span class="st">"vertical"</span>, legend.box <span class="op">=</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>      plot.title.position <span class="op">=</span> <span class="st">"plot"</span>) <span class="op">+</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>      <span class="co"># plot.title = element_textbox_simple(</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   maxwidth = unit(6,"in"),</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   hjust = .0005,</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   size = 10,</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   padding = margin(5.5, 5.5, 5.5, 5.5),</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   margin = margin(0, 0, 5.5, 0)</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>      <span class="co">#   # fill = "cornsilk"</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      <span class="co"># )) +</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Again adjust where the legend should be and how it should be labeled</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    guides(fill <span class="op">=</span> guide_legend(title <span class="op">=</span> <span class="st">"Variants"</span>, </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>                               title.position <span class="op">=</span> <span class="st">"top"</span>,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>                               title.hjust <span class="op">=</span> <span class="fl">.5</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>                               byrow <span class="op">=</span> TRUE,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>                               override.aes <span class="op">=</span> <span class="bu">list</span>(size<span class="op">=</span><span class="fl">5.5</span>)),</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>           size <span class="op">=</span> guide_legend( )) </span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co">## ---- stop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-countprop" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-countprop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/notebooks-nwcoe-fig-countprop-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Proportion of variants by year."><img src="index_files/figure-html/notebooks-nwcoe-fig-countprop-output-1.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-nwcoe-fig-countprop-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Proportion of variants by year."><img src="index_files/figure-html/notebooks-nwcoe-fig-countprop-output-1.png" width="672" height="480" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-countprop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Proportion of variants by year.
@@ -356,41 +360,61 @@ Figure&nbsp;1: Proportion of variants by year.
 </div>
 </div></div>
 </div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here you can write code that can be used as inline text</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># See the variant proportions values below in the summary</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Those values are not hard-coded/written. They will be automatically updated </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># in the text whenever there is new data/a new render</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>wa_prop <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">50</span>,<span class="st">"%"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ga_prop <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ne_prop <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>va_prop <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">60</span>,<span class="st">"%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="site-summaries" class="level1">
+<h1>Site Summaries</h1>
+<ul>
+<li>Washington State Department of Health - highest variant proportion is 50%</li>
+<li>Georgia Department of Public Health probablity of detection: 60 and the consensus genomes are uploaded to public repositories like GISAID and GenBank.</li>
+<li>Massachusetts Department of Health prop - 50</li>
+<li>Virginia Deparment of Health - 60%</li>
+</ul>
 <div class="quarto-embed-nb-cell" data-notebook="C:\Users\FAA3303\Projects\personal-repos\coe-test-org\sitrep-demo\docs\notebooks\necoe.qmd" data-notebook-title="New England Genomics Center of Excellence" data-notebook-cellid="cell-fig-state-analysis">
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-state-analysis" class="cell" data-message="false">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ------------------------------------------</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># state by state analysis</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>coeff <span class="op">&lt;-</span> <span class="dv">30</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>state_subset <span class="op">&lt;-</span> c(<span class="st">"Washington"</span>, <span class="st">"Massachusetts"</span>, <span class="st">"Georgia"</span>, <span class="st">"Minnesota"</span>, <span class="st">"Virginia"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># illustrate selected states</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>g <span class="op">&lt;-</span> us_states <span class="op">%&gt;%</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(state <span class="op">%</span><span class="kw">in</span><span class="op">%</span> state_subset) <span class="op">%&gt;%</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(date, cases_7day)) <span class="op">+</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  geom_line(color <span class="op">=</span> <span class="st">"orange"</span>) <span class="op">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  facet_wrap(<span class="op">~</span>state, scales <span class="op">=</span> <span class="st">"free"</span>) <span class="op">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  theme(legend.position <span class="op">=</span> <span class="st">"none"</span>) <span class="op">+</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  geom_line(aes(y <span class="op">=</span> deaths_7day <span class="op">*</span> coeff), color <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> scales::comma,</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> <span class="st">"Cases"</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    sec.axis <span class="op">=</span> sec_axis(deaths_7day <span class="op">~</span> . <span class="op">/</span> coeff,</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"Deaths"</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      labels <span class="op">=</span> scales::comma</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  theme(</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    axis.title.y <span class="op">=</span> element_text(color <span class="op">=</span> <span class="st">"orange"</span>, size <span class="op">=</span> <span class="dv">13</span>),</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    axis.title.y.right <span class="op">=</span> element_text(color <span class="op">=</span> <span class="st">"red"</span>, size <span class="op">=</span> <span class="dv">13</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  labs(</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">"U.S. Cases vs. Deaths"</span>,</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    subtitle <span class="op">=</span> <span class="st">"7-Day Average"</span>,</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    caption <span class="op">=</span> <span class="st">"Source: NY Times, Arthur Steinmetz"</span>,</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">"Date"</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>show(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-fig-state-analysis" class="cell" data-message="false">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ------------------------------------------</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># state by state analysis</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>coeff <span class="op">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>state_subset <span class="op">&lt;-</span> c(<span class="st">"Washington"</span>, <span class="st">"Massachusetts"</span>, <span class="st">"Georgia"</span>, <span class="st">"Minnesota"</span>, <span class="st">"Virginia"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># illustrate selected states</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>g <span class="op">&lt;-</span> us_states <span class="op">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(state <span class="op">%</span><span class="kw">in</span><span class="op">%</span> state_subset) <span class="op">%&gt;%</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(date, cases_7day)) <span class="op">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  geom_line(color <span class="op">=</span> <span class="st">"orange"</span>) <span class="op">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  facet_wrap(<span class="op">~</span>state, scales <span class="op">=</span> <span class="st">"free"</span>) <span class="op">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  theme(legend.position <span class="op">=</span> <span class="st">"none"</span>) <span class="op">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  geom_line(aes(y <span class="op">=</span> deaths_7day <span class="op">*</span> coeff), color <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> scales::comma,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> <span class="st">"Cases"</span>,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    sec.axis <span class="op">=</span> sec_axis(deaths_7day <span class="op">~</span> . <span class="op">/</span> coeff,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"Deaths"</span>,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>      labels <span class="op">=</span> scales::comma</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  theme(</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    axis.title.y <span class="op">=</span> element_text(color <span class="op">=</span> <span class="st">"orange"</span>, size <span class="op">=</span> <span class="dv">13</span>),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    axis.title.y.right <span class="op">=</span> element_text(color <span class="op">=</span> <span class="st">"red"</span>, size <span class="op">=</span> <span class="dv">13</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  labs(</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">"U.S. Cases vs. Deaths"</span>,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    subtitle <span class="op">=</span> <span class="st">"7-Day Average"</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    caption <span class="op">=</span> <span class="st">"Source: NY Times, Arthur Steinmetz"</span>,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">"Date"</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>show(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 7 rows containing missing values or values outside the scale range
 (`geom_line()`).
@@ -412,23 +436,23 @@ Figure&nbsp;2: From the New York Times: A couple of observations are obvious. Fi
 </div></div>
 </div>
 <div class="quarto-embed-nb-cell" data-notebook="C:\Users\FAA3303\Projects\personal-repos\coe-test-org\sitrep-demo\docs\notebooks\vacoe.qmd" data-notebook-title="Virginia Genomics Center of Excellence" data-notebook-cellid="cell-fig-fatality-plot">
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-fatality-plot" class="cell" data-message="false">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fatality <span class="op">&lt;-</span> best_fit$data[[<span class="dv">1</span>]] <span class="op">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(cases_7day <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(date <span class="op">&gt;</span> <span class="im">as</span>.Date(<span class="st">"2020-04-15"</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  mutate(rate <span class="op">=</span> led_deaths <span class="op">/</span> cases_7day)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">&lt;-</span> fatality <span class="op">%&gt;%</span> ggplot(aes(date, rate)) <span class="op">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  geom_line() <span class="op">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  geom_smooth() <span class="op">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  labs(</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">"Date"</span>, y <span class="op">=</span> <span class="st">"Fatality Rate"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">"Fatality Rates are Creeping Up"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    subtitle <span class="op">=</span> <span class="st">"Fatality Rate as a Percentage of Lagged Cases"</span>,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    caption <span class="op">=</span> <span class="st">"Source: NY Times, Arthur Steinmetz"</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels <span class="op">=</span> scales::percent)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>show(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-fig-fatality-plot" class="cell" data-message="false">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fatality <span class="op">&lt;-</span> best_fit$data[[<span class="dv">1</span>]] <span class="op">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(cases_7day <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>(date <span class="op">&gt;</span> <span class="im">as</span>.Date(<span class="st">"2020-04-15"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  mutate(rate <span class="op">=</span> led_deaths <span class="op">/</span> cases_7day)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">&lt;-</span> fatality <span class="op">%&gt;%</span> ggplot(aes(date, rate)) <span class="op">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  geom_line() <span class="op">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  geom_smooth() <span class="op">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  labs(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">"Date"</span>, y <span class="op">=</span> <span class="st">"Fatality Rate"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">"Fatality Rates are Creeping Up"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    subtitle <span class="op">=</span> <span class="st">"Fatality Rate as a Percentage of Lagged Cases"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    caption <span class="op">=</span> <span class="st">"Source: NY Times, Arthur Steinmetz"</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">+</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels <span class="op">=</span> scales::percent)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>show(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
@@ -436,7 +460,7 @@ Figure&nbsp;2: From the New York Times: A couple of observations are obvious. Fi
 <div id="fig-fatality-plot" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fatality-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/notebooks-vacoe-fig-fatality-plot-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: COVID-19 fatalities, outputs from New York Times modeling."><img src="index_files/figure-html/notebooks-vacoe-fig-fatality-plot-output-2.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-vacoe-fig-fatality-plot-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: COVID-19 fatalities, outputs from New York Times modeling."><img src="index_files/figure-html/notebooks-vacoe-fig-fatality-plot-output-2.png" width="672" height="480" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fatality-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: COVID-19 fatalities, outputs from New York Times modeling.
@@ -446,33 +470,13 @@ Figure&nbsp;3: COVID-19 fatalities, outputs from New York Times modeling.
 </div>
 </div></div>
 </div>
-</section>
-<section id="site-summaries" class="level1">
-<h1>Site Summaries</h1>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here you can write code that can be used as inline text</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># See the variant proportions values below in the summary</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Those values are not hard-coded/written. They will be automatically updated </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># in the text whenever there is new data/a new render</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>wa_prop <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">50</span>,<span class="st">"%"</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>ga_prop <span class="ot">&lt;-</span> <span class="dv">60</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>ne_prop <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>va_prop <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">60</span>,<span class="st">"%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-<ul>
-<li>Washington State Department of Health - highest variant proportion is 50%</li>
-<li>Georgia Department of Public Health probablity of detection: 60 and the consensus genomes are uploaded to public repositories like GISAID and GenBank.</li>
-<li>Massachusetts Department of Health prop - 50</li>
-<li>Virginia Deparment of Health - 60%</li>
-</ul>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">Section</h2>
+<section id="citations" class="level2">
+<h2 class="anchored" data-anchor-id="citations">Citations</h2>
 <p>This is a simple placeholder for the manuscript’s main document <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
-<ul>
-<li>To monitor SARS-CoV-2 in Washington state, Washington state Department of Health (WA DOH) implemented a Sentinel Surveillance system, a type of genomic surveillance that tracks SARS-CoV-2 variants across the state.</li>
-<li>Laboratories across the state, including the Washington state Public Health Laboratories (PHL) will sequence SARS-CoV-2 from collected specimens. Raw sequencing data is assembled into consensus genomes using publicly available bioinformatics pipeline, and the consensus genomes are uploaded to public repositories like GISAID and GenBank. This report demonstrates how the NW PGCoE utilizes SARS-CoV-2 sequencing data to monitor emerging variants biweekly, forecast emerging SARS-CoV-2 variants, and infers relative abundance estimates of SARS-CoV-2 variants in the wastewater. Previous work that looked at the disease severity of SARS-CoV-2 variants is currently being implemented to analyze the disease severity of current variants utilizing hospitalization data. This work is ongoing and will be presented at a later time.</li>
-</ul>
+<p><a href="https://coe-test-org.github.io/sitrep-demo/notebooks/nwcoe-preview.html#cell-fig-countprop"><span class="quarto-xref">Figure&nbsp;1</span> code source</a></p>
+<p><a href="https://coe-test-org.github.io/sitrep-demo/notebooks/necoe-preview.html#cell-fig-state-analysis"><span class="quarto-xref">Figure&nbsp;2</span> code source</a></p>
+<p><a href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot"><span class="quarto-xref">Figure&nbsp;3</span> code source</a></p>
+<p><a href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot">main article code source</a></p>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-knuth84" class="csl-entry" role="listitem">
 Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
@@ -889,7 +893,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
