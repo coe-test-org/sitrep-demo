@@ -1,6 +1,17 @@
 # Description
 A demo of the situation report
 
+# tl;dr 
+- **A fully automated situational report.**
+- **It does not require manually editing of any text, figures, statistics, or plots since everything gets rendered via code.**
+- **It is almost fully reproducible and can be scaled easily**
+
+# Links
+- [github page](https://coe-test-org.github.io/sitrep-demo/)
+- [pdf format using Typst](https://coe-test-org.github.io/sitrep-demo/typst-report.pdf)
+- [alternate pdf using Latex](https://coe-test-org.github.io/sitrep-demo/report.pdf)
+  [ 
+
 # Main Points
 
 Using Quarto + Github Actions helps to:
