@@ -29,9 +29,6 @@ format:
     template-partials:
         - assets/typst-template.typ
         - assets/typst-show.typ
-  # PrettyPDF-typst: 
-  #   columns: 2
-  #   papersize: iso-b3
 
 
 
