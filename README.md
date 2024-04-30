@@ -6,10 +6,10 @@ A demo of the situation report
 - **It does not require manually editing of any text, figures, statistics, or plots since everything gets rendered via code.**
 - **Fully reproducible and can be scaled easily**
 
-# Links
-- [github page](https://coe-test-org.github.io/sitrep-demo/)
+# Links/Demo Formats
 - [pdf format using Typst](https://coe-test-org.github.io/sitrep-demo/typst-report.pdf)
 - [alternate pdf using Latex](https://coe-test-org.github.io/sitrep-demo/report.pdf)
+- [html/github page](https://coe-test-org.github.io/sitrep-demo/)
 
 # Main Points
 
