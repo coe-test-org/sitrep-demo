@@ -43,6 +43,10 @@ jobs:
         run: |
           if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
           renv::restore()
+
+      - name: install tinytex
+        run: |
+            quarto install tinytex
        
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2.0.2
