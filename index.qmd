@@ -36,6 +36,10 @@ today_date <- Sys.Date()
 )[
   
 ```
+:::{.content-visible when-format="html"}
+# Key Findings
+:::
+
 -   Current data reflects a mixture of `{r} var` descendents as the likely near term variants.\
 -   Globally no other variants with unusual characteristics have been identified as having unusual growth.
 -   Some other point
@@ -73,7 +77,7 @@ va_prop <- paste0(60,"%")
 
 ```
 
-:::{.content-visible when-format="pdf"}
+
 ```{=typst}
 #showybox(
   title: "Site Summaries"
@@ -81,6 +85,11 @@ va_prop <- paste0(60,"%")
 
 
 ```
+
+:::{.content-visible when-format="html"}
+# Site Summaries
+:::
+
 -   Washington State Department of Health - highest variant proportion is `{r} wa_prop`
 -   Georgia Department of Public Health probablity of detection: `{r} ga_prop` and the consensus genomes are uploaded to public repositories like GISAID and GenBank.
 -   Massachusetts Department of Health prop - `{r} ne_prop`
@@ -90,19 +99,7 @@ va_prop <- paste0(60,"%")
 
   ]
 ```
-:::
 
-:::{.content-visible unless-format="pdf"}
-
-# Site Summaries
-
-
--   Washington State Department of Health - highest variant proportion is `{r} wa_prop`
--   Georgia Department of Public Health probablity of detection: `{r} ga_prop` and the consensus genomes are uploaded to public repositories like GISAID and GenBank.
--   Massachusetts Department of Health prop - `{r} ne_prop`
--   Virginia Deparment of Health - `{r} va_prop`
-
-:::
 
 {{< embed notebooks/necoe.qmd#fig-state-analysis >}}
 
@@ -118,4 +115,4 @@ This is a simple placeholder for the manuscript's main document [@knuth84].
 
 [@fig-fatality-plot code source](https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot)
 
-[main article code source](https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot)
+[main article code source](https://coe-test-org.github.io/sitrep-demo/index-preview.html)

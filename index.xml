@@ -86,6 +86,23 @@ Report</article-title>
     <caption><p>Figure 1: Proportion of variants by year.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-nwcoe-fig-countprop-output-1.png" />
   </fig>
+  <list list-type="bullet">
+    <list-item>
+      <p>Washington State Department of Health - highest variant
+      proportion is 50%</p>
+    </list-item>
+    <list-item>
+      <p>Georgia Department of Public Health probablity of detection: 60
+      and the consensus genomes are uploaded to public repositories like
+      GISAID and GenBank.</p>
+    </list-item>
+    <list-item>
+      <p>Massachusetts Department of Health prop - 50</p>
+    </list-item>
+    <list-item>
+      <p>Virginia Deparment of Health - 60%</p>
+    </list-item>
+  </list>
   <fig id="fig-state-analysis">
     <caption><p>Figure 2: From the New York Times: A couple of
     observations are obvious. First when cases start to rise, deaths
@@ -112,7 +129,7 @@ Report</article-title>
     code source</ext-link></p>
     <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot"><xref alt="Figure 3" rid="fig-fatality-plot">Figure 3</xref>
     code source</ext-link></p>
-    <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot">main
+    <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/index-preview.html">main
     article code source</ext-link></p>
   </sec>
 </sec>
@@ -285,6 +302,23 @@ ga_prop &lt;- 60
 ne_prop &lt;- 50
 va_prop &lt;- paste0(60,&quot;%&quot;)</code>
   </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p>Washington State Department of Health - highest variant
+      proportion is 50%</p>
+    </list-item>
+    <list-item>
+      <p>Georgia Department of Public Health probablity of detection: 60
+      and the consensus genomes are uploaded to public repositories like
+      GISAID and GenBank.</p>
+    </list-item>
+    <list-item>
+      <p>Massachusetts Department of Health prop - 50</p>
+    </list-item>
+    <list-item>
+      <p>Virginia Deparment of Health - 60%</p>
+    </list-item>
+  </list>
   <sec id="cell-fig-state-analysis-nb-article" specific-use="notebook-code">
   <code language="python"># ------------------------------------------
 # state by state analysis
@@ -377,7 +411,7 @@ show(g)</code>
     code source</ext-link></p>
     <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot"><xref alt="Figure 3" rid="fig-fatality-plot-nb-article">Figure 3</xref>
     code source</ext-link></p>
-    <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/notebooks/vacoe-preview.html#cell-fig-fatality-plot">main
+    <p><ext-link ext-link-type="uri" xlink:href="https://coe-test-org.github.io/sitrep-demo/index-preview.html">main
     article code source</ext-link></p>
   </sec>
 </sec>
@@ -580,227 +614,12 @@ Removed 7 rows containing missing values or values outside the scale range
 <sub-article article-type="notebook" id="nb-8-nb-2">
 <front-stub>
 <title-group>
-<article-title>Virginia Genomics Center of Excellence</article-title>
-</title-group>
-</front-stub>
-
-<body>
-<sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
-<code language="r script"># correlate deaths and cases by state
-library(tidyverse)
-</code>
-<code language="r script">library(covid19nytimes)
-library(lubridate)
-library(broom)
-</code>
-<code language="r script">library(knitr)
-library(timetk)
-
-# source https://github.com/nytimes/covid-19-data.git
-us_states_long &lt;- covid19nytimes::refresh_covid19nytimes_states()
-
-# The following filter is to restrict the data to that originally posted at
-# https://outsiderdata.netlify.app/post/covid-cases-vs-deaths/
-# Should you wish to update the models with the latest data, remove the
-# following statement.
-us_states_long &lt;- us_states_long %&gt;% filter(date &lt; ymd(&quot;2020-12-06&quot;))
-
-# if link is broken
-# load(&quot;../data/us_states_long.rdata&quot;)
-
-# use data from November 15 to stay consistent with text narrative
-cutoff_start &lt;- as.Date(&quot;2020-03-15&quot;) # not widespread enough until then
-cutoff_end &lt;- max(us_states_long$date) - 7 # discard last week since there are reporting lags
-
-us_states_long &lt;- us_states_long %&gt;% filter(date &gt;= cutoff_start)
-us_states_long &lt;- us_states_long %&gt;% filter(date &lt;= cutoff_end)
-# Remove tiny territories
-territories &lt;- c(&quot;Guam&quot;, &quot;Northern Mariana Islands&quot;)
-us_states_long &lt;- us_states_long %&gt;% filter(!(location %in% territories))
-</code>
-<sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
-<preformat>Warning: package 'tidyverse' was built under R version 4.2.3</preformat>
-</sec>
-<sec id="nb-code-cell-1-output-1-nb-2" specific-use="notebook-output">
-<preformat>Warning: package 'tidyr' was built under R version 4.2.3</preformat>
-</sec>
-<sec id="nb-code-cell-1-output-2-nb-2" specific-use="notebook-output">
-<preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-</sec>
-<sec id="nb-code-cell-1-output-3-nb-2" specific-use="notebook-output">
-<preformat>Warning: package 'broom' was built under R version 4.2.3</preformat>
-</sec>
-</sec>
-<sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
-<code language="r script"># Create rolling average changes
-# pivot wider
-# this will also be needed when we create lags
-us_states &lt;- us_states_long %&gt;%
-  # discard dates before cases were tracked.
-  filter(date &gt; as.Date(&quot;2020-03-01&quot;)) %&gt;%
-  pivot_wider(names_from = &quot;data_type&quot;, values_from = &quot;value&quot;) %&gt;%
-  rename(state = location) %&gt;%
-  select(date, state, cases_total, deaths_total) %&gt;%
-  mutate(state = as_factor(state)) %&gt;%
-  arrange(state, date) %&gt;%
-  group_by(state) %&gt;%
-  # smooth the data with 7 day moving average
-  mutate(cases_7day = (cases_total - lag(cases_total, 7)) / 7) %&gt;%
-  mutate(deaths_7day = (deaths_total - lag(deaths_total, 7)) / 7)
-
-# national analysis
-# ----------------------------------------------
-# aggregate state to national
-us &lt;- us_states %&gt;%
-  group_by(date) %&gt;%
-  summarize(across(
-    .cols = where(is.double),
-    .fns = function(x) sum(x, na.rm = T),
-    .names = &quot;{col}&quot;
-  ))
-
-# create columns for deaths led 0 to 40 days ahead
-max_lead &lt;- 40
-us_lags &lt;- us %&gt;%
-  # create lags by day
-  tk_augment_lags(deaths_7day, .lags = 0:-max_lead, .names = &quot;auto&quot;)
-# fix names to remove minus sign
-names(us_lags) &lt;- names(us_lags) %&gt;% str_replace_all(&quot;lag-|lag&quot;, &quot;lead&quot;)
-
-# use only case dates where we have complete future knowledge of deaths for all lead times.
-us_lags &lt;- us_lags %&gt;% filter(date &lt; cutoff_end - max_lead)
-</code>
-</sec>
-<sec id="nb-code-cell-3-nb-2" specific-use="notebook-code">
-<code language="r script"># make long form to nest
-# initialize models data frame
-models &lt;- us_lags %&gt;%
-  ungroup() %&gt;%
-  pivot_longer(
-    cols = contains(&quot;lead&quot;),
-    names_to = &quot;lead&quot;,
-    values_to = &quot;led_deaths&quot;
-  ) %&gt;%
-  select(date, cases_7day, lead, led_deaths) %&gt;%
-  mutate(lead = as.numeric(str_remove(lead, &quot;deaths_7day_lead&quot;))) %&gt;%
-  nest(data = c(date, cases_7day, led_deaths)) %&gt;%
-  # Run a regression on lagged cases and date vs deaths
-  mutate(model = map(
-    data,
-    function(df) {
-      lm(led_deaths ~ cases_7day + poly(as.numeric(as.Date(date)), 2), data = df)
-    }
-  ))
-
-# Add regression coefficient
-# get adjusted r squared
-models &lt;- models %&gt;%
-  mutate(adj_r = map(model, function(x) {
-    glance(x) %&gt;%
-      pull(adj.r.squared)
-  })
-  %&gt;% unlist())
-print(models)
-</code>
-<sec id="nb-code-cell-3-output-0-nb-2" specific-use="notebook-output">
-<preformat># A tibble: 41 × 4
-    lead data               model  adj_r
-   &lt;dbl&gt; &lt;list&gt;             &lt;list&gt; &lt;dbl&gt;
- 1     0 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.164
- 2     1 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.187
- 3     2 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.212
- 4     3 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.241
- 5     4 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.272
- 6     5 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.307
- 7     6 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.343
- 8     7 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.383
- 9     8 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.424
-10     9 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.467
-# ℹ 31 more rows</preformat>
-</sec>
-</sec>
-<sec id="model-fit-nb-2">
-  <title>Model Fit</title>
-  <sec id="nb-code-cell-4-nb-2" specific-use="notebook-code">
-  <code language="r script"># Show model fit by lead time
-# make predictions using best model
-best_fit &lt;- models %&gt;%
-  summarize(adj_r = max(adj_r)) %&gt;%
-  left_join(models, by = &quot;adj_r&quot;)
-
-g &lt;- models %&gt;%
-  ggplot(aes(lead, adj_r)) +
-  geom_line() +
-  labs(
-    subtitle = paste(&quot;Best fit lead =&quot;, best_fit$lead, &quot;days&quot;),
-    title = &quot;Model Fit By Lag Days&quot;,
-    x = &quot;Lead Time in Days for Deaths&quot;,
-    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;,
-    y = &quot;Adjusted R-squared&quot;
-  )
-show(g)
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/unnamed-chunk-4-1.png" />
-  </sec>
-</sec>
-<sec id="main-plot-nb-2">
-  <title>Main Plot</title>
-  <sec id="cell-fig-fatality-plot-nb-2" specific-use="notebook-code">
-  <code language="r script">
-fatality &lt;- best_fit$data[[1]] %&gt;%
-  filter(cases_7day &gt; 0) %&gt;%
-  filter(date &gt; as.Date(&quot;2020-04-15&quot;)) %&gt;%
-  mutate(rate = led_deaths / cases_7day)
-
-g &lt;- fatality %&gt;% ggplot(aes(date, rate)) +
-  geom_line() +
-  geom_smooth() +
-  labs(
-    x = &quot;Date&quot;, y = &quot;Fatality Rate&quot;,
-    title = &quot;Fatality Rates are Creeping Up&quot;,
-    subtitle = &quot;Fatality Rate as a Percentage of Lagged Cases&quot;,
-    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;
-  ) +
-  scale_y_continuous(labels = scales::percent)
-show(g)
-  </code>
-  <fig id="fig-fatality-plot-nb-2">
-    <caption><p>COVID-19 fatalities, outputs from New York Times
-    modeling.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/fig-fatality-plot-1.png" />
-  </fig>
-  <sec id="cell-fig-fatality-plot-output-0-nb-2" specific-use="notebook-output">
-  <preformat>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</preformat>
-  </sec>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-12-nb-3">
-<front-stub>
-<title-group>
 <article-title>NorthWest Genomics Center of Excellence</article-title>
 </title-group>
 </front-stub>
 
 <body>
-<sec id="set-up-nb-3">
+<sec id="set-up-nb-2">
   <title>Set Up</title>
   <p>This project uses an R environment (<monospace>renv</monospace>) to
   save all the packages/versions used in the scripts.</p>
@@ -818,7 +637,7 @@ show(g)
       <p>This should install all the packages required</p>
     </list-item>
   </list>
-  <sec id="nb-code-cell-1-nb-3" specific-use="notebook-code">
+  <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
   <code language="r script"># ----- Load Libraries ----- #
 ## ---- libraries
 library(pacman)
@@ -840,18 +659,18 @@ library(pacman)
 )
 ## ---- stop
   </code>
-  <sec id="nb-code-cell-1-output-0-nb-3" specific-use="notebook-output">
+  <sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
   <preformat>Warning: package 'pacman' was built under R version 4.2.3</preformat>
   </sec>
   </sec>
 </sec>
-<sec id="read-in-doh-data-nb-3">
+<sec id="read-in-doh-data-nb-2">
   <title>Read in DOH Data</title>
   <p>These data are public and can be found on the WA DOH resp illness
   dashboard
   <ext-link ext-link-type="uri" xlink:href="https://doh.wa.gov/data-and-statistical-reports/diseases-and-chronic-conditions/communicable-disease-surveillance-data/respiratory-illness-data-dashboard#downloads">under
   sequencing/variants</ext-link></p>
-  <sec id="nb-code-cell-2-nb-3" specific-use="notebook-code">
+  <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
   <code language="r script"># ----- Pull DOH Public Dashboard Data ----- #
 
 ## ---- pull-data
@@ -877,7 +696,7 @@ library(pacman)
   </code>
   <code language="r script">## ---- stop
   </code>
-  <sec id="nb-code-cell-2-output-0-nb-3" specific-use="notebook-output">
+  <sec id="nb-code-cell-2-output-0-nb-2" specific-use="notebook-output">
   <preformat># A tibble: 78 × 9
    start_date          end_date            variant    seven_day_count
    &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt;                &lt;dbl&gt;
@@ -897,11 +716,11 @@ library(pacman)
   </sec>
   </sec>
 </sec>
-<sec id="variant-plot-nb-3">
+<sec id="variant-plot-nb-2">
   <title>Variant Plot</title>
   <p>This should produce a similar variant plot to what’s in the
   dashboard</p>
-  <sec id="cell-fig-countprop-nb-3" specific-use="notebook-code">
+  <sec id="cell-fig-countprop-nb-2" specific-use="notebook-code">
   <code language="r script">
 # title = &quot;&lt;b&gt;&lt;span style = 'font-size:14pt;'&gt;Statewide COVID-19 Variants: Last 12 Weeks&lt;/span&gt;&lt;/b&gt;&lt;br&gt;This chart shows the percent of genetic mutations (or variants) of the COVID-19 virus by lineage for the past 6 weeks. Knowing how the virus is changing and which variants are found helps inform our public health response, which includes developing and recommending effective vaccines and treatments&quot;)
 
@@ -968,10 +787,225 @@ library(pacman)
 
 ## ---- stop
   </code>
-  <fig id="fig-countprop-nb-3">
+  <fig id="fig-countprop-nb-2">
     <caption><p>Proportion of variants by year.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="nwcoe_files/figure-jats/fig-countprop-1.png" />
   </fig>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-12-nb-3">
+<front-stub>
+<title-group>
+<article-title>Virginia Genomics Center of Excellence</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="nb-code-cell-1-nb-3" specific-use="notebook-code">
+<code language="r script"># correlate deaths and cases by state
+library(tidyverse)
+</code>
+<code language="r script">library(covid19nytimes)
+library(lubridate)
+library(broom)
+</code>
+<code language="r script">library(knitr)
+library(timetk)
+
+# source https://github.com/nytimes/covid-19-data.git
+us_states_long &lt;- covid19nytimes::refresh_covid19nytimes_states()
+
+# The following filter is to restrict the data to that originally posted at
+# https://outsiderdata.netlify.app/post/covid-cases-vs-deaths/
+# Should you wish to update the models with the latest data, remove the
+# following statement.
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt; ymd(&quot;2020-12-06&quot;))
+
+# if link is broken
+# load(&quot;../data/us_states_long.rdata&quot;)
+
+# use data from November 15 to stay consistent with text narrative
+cutoff_start &lt;- as.Date(&quot;2020-03-15&quot;) # not widespread enough until then
+cutoff_end &lt;- max(us_states_long$date) - 7 # discard last week since there are reporting lags
+
+us_states_long &lt;- us_states_long %&gt;% filter(date &gt;= cutoff_start)
+us_states_long &lt;- us_states_long %&gt;% filter(date &lt;= cutoff_end)
+# Remove tiny territories
+territories &lt;- c(&quot;Guam&quot;, &quot;Northern Mariana Islands&quot;)
+us_states_long &lt;- us_states_long %&gt;% filter(!(location %in% territories))
+</code>
+<sec id="nb-code-cell-1-output-0-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'tidyverse' was built under R version 4.2.3</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-1-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'tidyr' was built under R version 4.2.3</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-2-nb-3" specific-use="notebook-output">
+<preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-3-nb-3" specific-use="notebook-output">
+<preformat>Warning: package 'broom' was built under R version 4.2.3</preformat>
+</sec>
+</sec>
+<sec id="nb-code-cell-2-nb-3" specific-use="notebook-code">
+<code language="r script"># Create rolling average changes
+# pivot wider
+# this will also be needed when we create lags
+us_states &lt;- us_states_long %&gt;%
+  # discard dates before cases were tracked.
+  filter(date &gt; as.Date(&quot;2020-03-01&quot;)) %&gt;%
+  pivot_wider(names_from = &quot;data_type&quot;, values_from = &quot;value&quot;) %&gt;%
+  rename(state = location) %&gt;%
+  select(date, state, cases_total, deaths_total) %&gt;%
+  mutate(state = as_factor(state)) %&gt;%
+  arrange(state, date) %&gt;%
+  group_by(state) %&gt;%
+  # smooth the data with 7 day moving average
+  mutate(cases_7day = (cases_total - lag(cases_total, 7)) / 7) %&gt;%
+  mutate(deaths_7day = (deaths_total - lag(deaths_total, 7)) / 7)
+
+# national analysis
+# ----------------------------------------------
+# aggregate state to national
+us &lt;- us_states %&gt;%
+  group_by(date) %&gt;%
+  summarize(across(
+    .cols = where(is.double),
+    .fns = function(x) sum(x, na.rm = T),
+    .names = &quot;{col}&quot;
+  ))
+
+# create columns for deaths led 0 to 40 days ahead
+max_lead &lt;- 40
+us_lags &lt;- us %&gt;%
+  # create lags by day
+  tk_augment_lags(deaths_7day, .lags = 0:-max_lead, .names = &quot;auto&quot;)
+# fix names to remove minus sign
+names(us_lags) &lt;- names(us_lags) %&gt;% str_replace_all(&quot;lag-|lag&quot;, &quot;lead&quot;)
+
+# use only case dates where we have complete future knowledge of deaths for all lead times.
+us_lags &lt;- us_lags %&gt;% filter(date &lt; cutoff_end - max_lead)
+</code>
+</sec>
+<sec id="nb-code-cell-3-nb-3" specific-use="notebook-code">
+<code language="r script"># make long form to nest
+# initialize models data frame
+models &lt;- us_lags %&gt;%
+  ungroup() %&gt;%
+  pivot_longer(
+    cols = contains(&quot;lead&quot;),
+    names_to = &quot;lead&quot;,
+    values_to = &quot;led_deaths&quot;
+  ) %&gt;%
+  select(date, cases_7day, lead, led_deaths) %&gt;%
+  mutate(lead = as.numeric(str_remove(lead, &quot;deaths_7day_lead&quot;))) %&gt;%
+  nest(data = c(date, cases_7day, led_deaths)) %&gt;%
+  # Run a regression on lagged cases and date vs deaths
+  mutate(model = map(
+    data,
+    function(df) {
+      lm(led_deaths ~ cases_7day + poly(as.numeric(as.Date(date)), 2), data = df)
+    }
+  ))
+
+# Add regression coefficient
+# get adjusted r squared
+models &lt;- models %&gt;%
+  mutate(adj_r = map(model, function(x) {
+    glance(x) %&gt;%
+      pull(adj.r.squared)
+  })
+  %&gt;% unlist())
+print(models)
+</code>
+<sec id="nb-code-cell-3-output-0-nb-3" specific-use="notebook-output">
+<preformat># A tibble: 41 × 4
+    lead data               model  adj_r
+   &lt;dbl&gt; &lt;list&gt;             &lt;list&gt; &lt;dbl&gt;
+ 1     0 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.164
+ 2     1 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.187
+ 3     2 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.212
+ 4     3 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.241
+ 5     4 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.272
+ 6     5 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.307
+ 7     6 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.343
+ 8     7 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.383
+ 9     8 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.424
+10     9 &lt;tibble [218 × 3]&gt; &lt;lm&gt;   0.467
+# ℹ 31 more rows</preformat>
+</sec>
+</sec>
+<sec id="model-fit-nb-3">
+  <title>Model Fit</title>
+  <sec id="nb-code-cell-4-nb-3" specific-use="notebook-code">
+  <code language="r script"># Show model fit by lead time
+# make predictions using best model
+best_fit &lt;- models %&gt;%
+  summarize(adj_r = max(adj_r)) %&gt;%
+  left_join(models, by = &quot;adj_r&quot;)
+
+g &lt;- models %&gt;%
+  ggplot(aes(lead, adj_r)) +
+  geom_line() +
+  labs(
+    subtitle = paste(&quot;Best fit lead =&quot;, best_fit$lead, &quot;days&quot;),
+    title = &quot;Model Fit By Lag Days&quot;,
+    x = &quot;Lead Time in Days for Deaths&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;,
+    y = &quot;Adjusted R-squared&quot;
+  )
+show(g)
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/unnamed-chunk-4-1.png" />
+  </sec>
+</sec>
+<sec id="main-plot-nb-3">
+  <title>Main Plot</title>
+  <sec id="cell-fig-fatality-plot-nb-3" specific-use="notebook-code">
+  <code language="r script">
+fatality &lt;- best_fit$data[[1]] %&gt;%
+  filter(cases_7day &gt; 0) %&gt;%
+  filter(date &gt; as.Date(&quot;2020-04-15&quot;)) %&gt;%
+  mutate(rate = led_deaths / cases_7day)
+
+g &lt;- fatality %&gt;% ggplot(aes(date, rate)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    x = &quot;Date&quot;, y = &quot;Fatality Rate&quot;,
+    title = &quot;Fatality Rates are Creeping Up&quot;,
+    subtitle = &quot;Fatality Rate as a Percentage of Lagged Cases&quot;,
+    caption = &quot;Source: NY Times, Arthur Steinmetz&quot;
+  ) +
+  scale_y_continuous(labels = scales::percent)
+show(g)
+  </code>
+  <fig id="fig-fatality-plot-nb-3">
+    <caption><p>COVID-19 fatalities, outputs from New York Times
+    modeling.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="vacoe_files/figure-jats/fig-fatality-plot-1.png" />
+  </fig>
+  <sec id="cell-fig-fatality-plot-output-0-nb-3" specific-use="notebook-output">
+  <preformat>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</preformat>
+  </sec>
   </sec>
 </sec>
 </body>
