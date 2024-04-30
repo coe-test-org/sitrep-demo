@@ -119,7 +119,8 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link active" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
   <li><a href="#site-summaries" id="toc-site-summaries" class="nav-link" data-scroll-target="#site-summaries">Site Summaries</a>
   <ul class="collapse">
   <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
@@ -136,12 +137,15 @@ div.csl-indent {
   
 
 
+<section id="key-findings" class="level1">
+<h1>Key Findings</h1>
 <ul>
 <li>Current data reflects a mixture of JN.1 descendents as the likely near term variants.<br>
 </li>
 <li>Globally no other variants with unusual characteristics have been identified as having unusual growth.</li>
 <li>Some other point</li>
 </ul>
+</section>
 <section id="situation-update-details" class="level1">
 <h1>Situation Update Details</h1>
 <ul>
@@ -637,7 +641,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

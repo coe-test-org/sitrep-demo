@@ -247,7 +247,8 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link active" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#situation-update-details" id="toc-situation-update-details" class="nav-link" data-scroll-target="#situation-update-details">Situation Update Details</a></li>
   <li><a href="#site-summaries" id="toc-site-summaries" class="nav-link" data-scroll-target="#site-summaries">Site Summaries</a>
   <ul class="collapse">
   <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
@@ -263,12 +264,15 @@
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"JN.1"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>today_date <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
+<section id="key-findings" class="level1">
+<h1>Key Findings</h1>
 <ul>
 <li>Current data reflects a mixture of JN.1 descendents as the likely near term variants.<br>
 </li>
 <li>Globally no other variants with unusual characteristics have been identified as having unusual growth.</li>
 <li>Some other point</li>
 </ul>
+</section>
 <section id="situation-update-details" class="level1">
 <h1>Situation Update Details</h1>
 <ul>
@@ -893,7 +897,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

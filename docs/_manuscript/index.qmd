@@ -36,6 +36,10 @@ today_date <- Sys.Date()
 )[
   
 ```
+:::{.content-visible when-format="html"}
+# Key Findings
+:::
+
 -   Current data reflects a mixture of `{r} var` descendents as the likely near term variants.\
 -   Globally no other variants with unusual characteristics have been identified as having unusual growth.
 -   Some other point
