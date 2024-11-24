@@ -65,7 +65,7 @@ Report</article-title>
       driven wave of COVID-19 infections.</p>
     </list-item>
     <list-item>
-      <p>As of 2024-04-30, there were X samples from MM/DD/YYYY -
+      <p>As of 2024-11-24, there were X samples from MM/DD/YYYY -
       MM/DD/YYYY, some comment on trend</p>
     </list-item>
     <list-item>
@@ -86,21 +86,32 @@ Report</article-title>
     <caption><p>Figure 1: Proportion of variants by year.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-nwcoe-fig-countprop-output-1.png" />
   </fig>
+  <preformat>        Date Variant Proportion Count
+1 2023-01-01   Alpha  0.3000000    30
+2 2023-01-01   Delta  0.2979798    30
+3 2023-01-01 Omicron  0.2959596    30
+4 2023-01-02   Alpha  0.2939394    29
+5 2023-01-02   Delta  0.2919192    29
+6 2023-01-02 Omicron  0.2898990    29</preformat>
+  <preformat># weights:  9 (4 variable)
+initial  value 10986.122887 
+final  value 10985.946043 
+converged</preformat>
   <list list-type="bullet">
     <list-item>
-      <p>Washington State Department of Health - highest variant
-      proportion is 50%</p>
+      <p>Washington State Department of Health - Alpha variant
+      proportion is 33.50%</p>
     </list-item>
     <list-item>
-      <p>Georgia Department of Public Health probablity of detection: 60
-      and the consensus genomes are uploaded to public repositories like
-      GISAID and GenBank.</p>
+      <p>Georgia Department of Public Health probablity of detection:
+      33.38% and the consensus genomes are uploaded to public
+      repositories like GISAID and GenBank.</p>
     </list-item>
     <list-item>
-      <p>Massachusetts Department of Health prop - 50</p>
+      <p>Massachusetts Department of Health prop - 33.38%</p>
     </list-item>
     <list-item>
-      <p>Virginia Deparment of Health - 60%</p>
+      <p>Virginia Deparment of Health - 33.50%</p>
     </list-item>
   </list>
   <fig id="fig-state-analysis">
@@ -202,7 +213,7 @@ today_date &lt;- Sys.Date()</code>
       driven wave of COVID-19 infections.</p>
     </list-item>
     <list-item>
-      <p>As of 2024-04-30, there were X samples from MM/DD/YYYY -
+      <p>As of 2024-11-24, there were X samples from MM/DD/YYYY -
       MM/DD/YYYY, some comment on trend</p>
     </list-item>
     <list-item>
@@ -297,26 +308,125 @@ today_date &lt;- Sys.Date()</code>
 # Those values are not hard-coded/written. They will be automatically updated 
 # in the text whenever there is new data/a new render
 
-wa_prop &lt;- paste0(50,&quot;%&quot;)
-ga_prop &lt;- 60
-ne_prop &lt;- 50
-va_prop &lt;- paste0(60,&quot;%&quot;)</code>
+# wa_prop &lt;- paste0(50,&quot;%&quot;)
+# ga_prop &lt;- 60
+# ne_prop &lt;- 50
+# va_prop &lt;- paste0(60,&quot;%&quot;)
+
+# Load necessary libraries
+set.seed(123)
+library(dplyr)</code>
+  <code language="r script"># Generate fake data for COVID-19 variants over 100 days
+dates &lt;- seq.Date(from = as.Date(&quot;2023-01-01&quot;), by = &quot;days&quot;, length.out = 100)
+
+# Create different variants with changing proportions over time
+variants &lt;- c(&quot;Alpha&quot;, &quot;Delta&quot;, &quot;Omicron&quot;)
+
+# Simulate variant proportions that change over time (e.g., Omicron increases)
+variant_proportions &lt;- data.frame(
+  Date = rep(dates, each = length(variants)),
+  Variant = rep(variants, times = length(dates)),
+  Proportion = c(
+    seq(0.3, 0.1, length.out = length(dates)),  # Alpha
+    seq(0.4, 0.2, length.out = length(dates)),  # Delta
+    seq(0.3, 0.7, length.out = length(dates))   # Omicron
+  )
+)
+
+# Create counts based on proportions, assume total cases per day is around 100
+variant_proportions &lt;- variant_proportions %&gt;%
+  mutate(Count = round(Proportion * 100))
+
+# Show a preview of the data
+head(variant_proportions)</code>
+  <code language="r script"># Reshape the data to wide format for modeling using pivot_wider
+variant_data_wide &lt;- variant_proportions %&gt;%
+  tidyr::pivot_wider(names_from = Variant, values_from = Count, values_fill = list(Count = 0))
+# Fit a multinomial logistic regression model to estimate the variant proportions over time
+# We will use the &quot;nnet&quot; package for multinomial regression
+
+library(nnet)
+
+# Create a model where the response is the counts for each variant and the predictor is time (date)
+model &lt;- multinom(cbind(Alpha, Delta, Omicron) ~ Date, data = variant_data_wide)</code>
+  <code language="r script"># Summarize the model
+# summary(model)
+
+# Predict variant proportions
+predictions &lt;- predict(model, type = &quot;probs&quot;)
+predicted_data &lt;- data.frame(Date = dates, Alpha = predictions[,1], Delta = predictions[,2], Omicron = predictions[,3])
+
+# Show predictions for the first few days
+# head(predicted_data)
+
+wa_prop &lt;- predicted_data %&gt;%
+  arrange(desc(Date)) %&gt;%
+  slice(1) %&gt;%
+  pull(Delta) %&gt;%
+  scales::percent(., accuracy = 0.01)
+
+ga_prop &lt;- predicted_data %&gt;%
+  arrange(desc(Date)) %&gt;%
+  slice(1) %&gt;%
+  pull(Omicron) %&gt;%
+  scales::percent(., accuracy = 0.01)
+
+ne_prop &lt;- predicted_data %&gt;%
+  arrange(desc(Date)) %&gt;%
+  slice(1) %&gt;%
+  pull(Omicron) %&gt;%
+  scales::percent(., accuracy = 0.01)
+
+va_prop &lt;- predicted_data %&gt;%
+  arrange(desc(Date)) %&gt;%
+  slice(1) %&gt;%
+  pull(Delta) %&gt;%
+  scales::percent(., accuracy = 0.01)</code>
+  <sec id="nb-code-cell-2-output-0-nb-article" specific-use="notebook-output">
+  <preformat>
+Attaching package: 'dplyr'</preformat>
+  </sec>
+  <sec id="nb-code-cell-2-output-1-nb-article" specific-use="notebook-output">
+  <preformat>The following objects are masked from 'package:stats':
+
+    filter, lag</preformat>
+  </sec>
+  <sec id="nb-code-cell-2-output-2-nb-article" specific-use="notebook-output">
+  <preformat>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</preformat>
+  </sec>
+  <sec id="nb-code-cell-2-output-3-nb-article" specific-use="notebook-output">
+  <preformat>        Date Variant Proportion Count
+1 2023-01-01   Alpha  0.3000000    30
+2 2023-01-01   Delta  0.2979798    30
+3 2023-01-01 Omicron  0.2959596    30
+4 2023-01-02   Alpha  0.2939394    29
+5 2023-01-02   Delta  0.2919192    29
+6 2023-01-02 Omicron  0.2898990    29</preformat>
+  </sec>
+  <sec id="nb-code-cell-2-output-4-nb-article" specific-use="notebook-output">
+  <preformat># weights:  9 (4 variable)
+initial  value 10986.122887 
+final  value 10985.946043 
+converged</preformat>
+  </sec>
   </sec>
   <list list-type="bullet">
     <list-item>
-      <p>Washington State Department of Health - highest variant
-      proportion is 50%</p>
+      <p>Washington State Department of Health - Alpha variant
+      proportion is 33.50%</p>
     </list-item>
     <list-item>
-      <p>Georgia Department of Public Health probablity of detection: 60
-      and the consensus genomes are uploaded to public repositories like
-      GISAID and GenBank.</p>
+      <p>Georgia Department of Public Health probablity of detection:
+      33.38% and the consensus genomes are uploaded to public
+      repositories like GISAID and GenBank.</p>
     </list-item>
     <list-item>
-      <p>Massachusetts Department of Health prop - 50</p>
+      <p>Massachusetts Department of Health prop - 33.38%</p>
     </list-item>
     <list-item>
-      <p>Virginia Deparment of Health - 60%</p>
+      <p>Virginia Deparment of Health - 33.50%</p>
     </list-item>
   </list>
   <sec id="cell-fig-state-analysis-nb-article" specific-use="notebook-code">
